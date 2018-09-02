@@ -6,3 +6,4 @@ apt install -y gedit
 apt install -y gcc
 apt install -y vim
 apt install -y vlc
+apt install -y baobap
