@@ -10,3 +10,6 @@ apt install -y vlc
 apt install -y baobap
 apt install -y default-jdk
 apt install -y nodejs
+
+#for inspecting and developing REST APIs
+snap install postman 
