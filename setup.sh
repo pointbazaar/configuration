@@ -16,5 +16,9 @@ apt install -y nodejs
 #build tools
 apt install -y maven
 
+#graphic tools
+#vector graphics - inkscape
+apt install -y inkscape
+
 #for inspecting and developing REST APIs
 snap install postman 
