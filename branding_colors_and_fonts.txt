@@ -1,7 +1,7 @@
-background-color green light:
-#229759
+background-color green light: (for button background,...)
+#005227
 
-background-color green dark: (for button background,...)
+background-color green dark: (for navbar background, ...)
 #014421
 
 foreground gold color :
