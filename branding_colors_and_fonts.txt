@@ -1,5 +1,8 @@
-background color green for some things:
+background-color green light:
 #229759
+
+background-color green dark: (for button background,...)
+#014421
 
 foreground gold color :
 #F9AE1A
