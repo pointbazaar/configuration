@@ -1,0 +1,11 @@
+background color green for some things:
+#229759
+
+foreground gold color :
+#F9AE1A
+
+font:
+UNDECIDED
+
+font-size in points:
+UNDECIDED
