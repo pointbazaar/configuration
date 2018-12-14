@@ -12,4 +12,5 @@ UNDECIDED
 
 
 the css that the browser reads latest is what counts.
-load seperate css file after bootstrap to overwrite it's values
+load seperate css file after bootstrap and use 
+additional custom classes to modify the colors
