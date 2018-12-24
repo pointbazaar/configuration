@@ -7,6 +7,10 @@
 apt install -y gedit
 apt install -y vim
 
+#haskell
+apt install -y ghc
+apt install -y ghci
+
 apt install -y gcc
 apt install -y vlc
 apt install -y baobap
