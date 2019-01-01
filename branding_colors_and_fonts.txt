@@ -1,0 +1,34 @@
+background-color green light: 
+#005227
+
+background-color green dark: (for navbar background)
+#014421
+
+foreground gold color for the van autrui brand text and product names :
+#F9AE1A
+
+font:
+font-family: "Roboto", sans-serif;
+font-weight: 400;
+
+
+-------------------------
+navigation:
+
+every link in navigation should be a button, if it's not a dropdown item.
+the van autrui name should not be a button. 
+
+the navbar shouldbe in a 'container-fullwidth' to cover the entire width
+
+the van autrui logo has to be on the left of the name, without additional padding or margin.
+-------------------------
+
+buttons:
+we use .btn, .btn-primary and the like. no custom buttons!
+
+
+-------------------------
+
+the css that the browser reads latest is what counts.
+load seperate css file after bootstrap and use 
+additional custom classes to modify the colors
