@@ -11,5 +11,12 @@ apt install -y baobap
 apt install -y default-jdk
 apt install -y nodejs
 
+
 #for inspecting and developing REST APIs
 snap install postman 
+
+#for timing and profiling applications how long they take
+apt install -y time
+
+#for looking at system spec
+apt install -y screenfetch
