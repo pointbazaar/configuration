@@ -47,4 +47,5 @@ apt install -y apache2
 
 #don't forget letsencrypt at certbot
 
+apt install -y hddtemp
 
