@@ -7,6 +7,9 @@
 apt install -y gedit
 apt install -y vim
 
+#version control
+apt install -y git
+
 #haskell
 apt install -y ghc
 apt install -y ghci
@@ -47,3 +50,7 @@ apt install -y apache2
 
 apt install -y hddtemp
 
+
+
+#set global gitignore, we already have downloaded this repo, it should be in home directory
+git config --global core.excludesfile '~/configuration/.gitignore'
