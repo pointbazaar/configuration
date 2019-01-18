@@ -4,24 +4,24 @@
 #some things every dev in our organization needs
 
 #editors
-apt install -y gedit
-apt install -y vim
+apt install -y gedit vim
+#apt install -y vim
 
 #version control
 apt install -y git
 
 #haskell
-apt install -y ghc
-apt install -y ghci
-apt install -y haskell-stack
+apt install -y ghc ghci haskell-stack
+#apt install -y ghci
+#apt install -y haskell-stack
 #upgrade that
 stack upgrade
 
-apt install -y gcc
-apt install -y vlc
-apt install -y baobap
-apt install -y default-jdk
-apt install -y nodejs
+apt install -y gcc vlc baobap default-jdk nodejs
+#apt install -y vlc
+#apt install -y baobap
+#apt install -y default-jdk
+#apt install -y nodejs
 
 
 #for timing and profiling applications how long they take
@@ -36,8 +36,7 @@ apt install -y maven
 #vector graphics - inkscape
 apt install -y inkscape
 
-#for inspecting and developing REST APIs
-snap install postman
+#for inspecting and developing REST APIs, dont use postman bc its commercial product
 
 #do not install atom, it is slow
 
@@ -47,9 +46,6 @@ apt install -y nginx
 apt install -y apache2
 
 #don't forget letsencrypt at certbot
-
-apt install -y hddtemp
-
 
 
 #set global gitignore, we already have downloaded this repo, it should be in home directory
