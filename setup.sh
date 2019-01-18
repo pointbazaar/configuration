@@ -10,6 +10,9 @@ apt install -y vim
 #haskell
 apt install -y ghc
 apt install -y ghci
+apt install -y haskell-stack
+#upgrade that
+stack upgrade
 
 apt install -y gcc
 apt install -y vlc
@@ -33,12 +36,7 @@ apt install -y inkscape
 #for inspecting and developing REST APIs
 snap install postman
 
-#install atom
-curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
-sudo apt-get update 
-sudo apt-get install atom
-
+#do not install atom, it is slow
 
 #https://www.digitalocean.com/community/tutorials/how-to-configure-nginx-as-a-reverse-proxy-for-apache
 #server stuff
