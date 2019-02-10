@@ -47,6 +47,9 @@ apt install -y apache2
 
 #don't forget letsencrypt at certbot
 
+#mail server setup
+sudo apt-get install postfix
+
 
 #set global gitignore, we already have downloaded this repo, it should be in home directory
 git config --global core.excludesfile '~/configuration/.gitignore'
