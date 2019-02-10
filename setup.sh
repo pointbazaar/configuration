@@ -51,6 +51,7 @@ apt install -y apache2
 sudo apt-get install postfix
 sudo apt-get install courier-pop
 sudo apt-get install courier-imap
+sudo apt install courier-authdaemon
 
 
 #set global gitignore, we already have downloaded this repo, it should be in home directory
