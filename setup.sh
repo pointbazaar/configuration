@@ -49,6 +49,8 @@ apt install -y apache2
 
 #mail server setup
 sudo apt-get install postfix
+sudo apt-get install courier-pop
+sudo apt-get install courier-imap
 
 
 #set global gitignore, we already have downloaded this repo, it should be in home directory
