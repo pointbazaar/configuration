@@ -53,6 +53,10 @@ sudo apt-get install courier-pop
 sudo apt-get install courier-imap
 sudo apt install courier-authdaemon
 
+#pdf, images
+sudo apt install -y feh
+sudo apt install -y xpdf
+
 
 #set global gitignore, we already have downloaded this repo, it should be in home directory
 git config --global core.excludesfile '~/configuration/.gitignore'
