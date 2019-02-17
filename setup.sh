@@ -58,5 +58,8 @@ sudo apt install -y feh
 sudo apt install -y xpdf
 
 
+#see a tree view of filesystem
+sudo apt install -y tree
+
 #set global gitignore, we already have downloaded this repo, it should be in home directory
 git config --global core.excludesfile '~/configuration/.gitignore'
