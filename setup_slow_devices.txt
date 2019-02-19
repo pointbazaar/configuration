@@ -3,4 +3,5 @@ General Tips to make your Setup Faster
 - use linux discribution optimized for performance, like lubuntu
 
 - use firefox "about:config" and set javascript.enabled=false
+ - because the above is not practical, use NoScript Firefox extension
 
