@@ -4,7 +4,10 @@
 // - modify it via the UI (e.g. via about:config in the browser); or
 // - set it within a user.js file in your profile.
 
-user_pref("browser.newtabpage.enhanced", false);
+//ln -s {location of this file}
+//from inside that folder: ~/.mozilla/firefox/{random stuff}.default/ 
+
+user_pref("browser.newtabpage.enhanced", true);
 
 user_pref("layout.css.font-display.enabled", false);
 user_pref("layout.css.font-loading-api.enabled", false);
@@ -35,3 +38,24 @@ user_pref("nglayout.enable_drag_images",false);
 
 user_pref("zoom.minPercent",100);
 user_pref("zoom.maxPercent",100);
+
+
+user_pref("browser.display.background_color","#d2896b");
+user_pref("browser.display.foreground_color","#000000");
+
+user_pref("browser.tabs.closeWindowWithLastTab",false);
+
+//test
+//user_pref("browser.urlbar.quantumbar",true);
+user_pref("browser.urlbar.usepreloadedtopurls.enabled",true);
+
+user_pref("devtools.debugger.auto-pretty-print",true);
+
+user_pref("devtools.debugger.features.code-folding",true);
+
+user_pref("dom.animations-api.core.enabled",false);
+
+user_pref("gfx.downloadable_fonts.enabled",false);
+
+//currently looking at middlemouse.paste
+
