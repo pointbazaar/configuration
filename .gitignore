@@ -28,6 +28,8 @@ hs_err_pid*
 #Eclipse
 #TODO
 
+#kdevelop
+.kdev4/
 
 #recommended haskell gitignore from github
 dist
