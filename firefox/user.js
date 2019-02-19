@@ -7,7 +7,7 @@
 //ln -s {location of this file}
 //from inside that folder: ~/.mozilla/firefox/{random stuff}.default/ 
 
-user_pref("browser.newtabpage.enhanced", true);
+//user_pref("browser.newtabpage.enhanced", true);
 
 user_pref("layout.css.font-display.enabled", false);
 user_pref("layout.css.font-loading-api.enabled", false);
@@ -45,9 +45,7 @@ user_pref("browser.display.foreground_color","#000000");
 
 user_pref("browser.tabs.closeWindowWithLastTab",false);
 
-//test
-//user_pref("browser.urlbar.quantumbar",true);
-user_pref("browser.urlbar.usepreloadedtopurls.enabled",true);
+//user_pref("browser.urlbar.usepreloadedtopurls.enabled",true);
 
 user_pref("devtools.debugger.auto-pretty-print",true);
 
@@ -57,5 +55,4 @@ user_pref("dom.animations-api.core.enabled",false);
 
 user_pref("gfx.downloadable_fonts.enabled",false);
 
-//currently looking at middlemouse.paste
 
