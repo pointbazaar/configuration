@@ -7,3 +7,27 @@ General Tips to make your Setup Faster
 
 - use firefox "about:config" and search for "css". there are layout.css.{attribute} attributes you can toggle to disable stupid 
   font features and the like which only eat cpu and memory without purpose
+
+  set the following attributes to false:
+    layout.css.
+        font-variations.enabled
+        individual-transform.enabled
+        initial-letter.enabled
+        prefixes.font-features
+        prefixes.transforms
+        prefixes.transitions
+        prefixes.animations
+        scrollbar-color.enabled
+        scrollbar-width.enabled
+        text-justify-enabled
+        background-blend-mode-enabled
+        contain.enabled
+        font-loading-api.enabled
+        motion-path.enabled
+    nglayout.enable_drag_images
+
+  set the following properties
+    layout.frame_rate=30
+    zoom.minPercent=100
+    zoom.maxPercent=200
+
