@@ -5,3 +5,5 @@ General Tips to make your Setup Faster
 - use firefox "about:config" and set javascript.enabled=false
  - because the above is not practical, use NoScript Firefox extension
 
+- use firefox "about:config" and search for "css". there are layout.css.{attribute} attributes you can toggle to disable stupid 
+  font features and the like which only eat cpu and memory without purpose
