@@ -31,6 +31,7 @@ apt install -y time
 apt install -y screenfetch
 #build tools
 apt install -y maven
+apt install -y gradle
 
 #graphic tools
 #vector graphics - inkscape
