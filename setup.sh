@@ -6,11 +6,14 @@
 #editors
 apt install -y gedit vim
 
+#IDE's
+sudo snap install intellij-idea-community --classic
+
 #version control
 apt install -y git
 
 #haskell
-apt install -y ghc ghci haskell-stack
+apt install -y ghc haskell-stack
 #upgrade that
 stack upgrade
 
