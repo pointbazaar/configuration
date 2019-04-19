@@ -4,7 +4,7 @@
 #some things every dev in our organization needs
 
 #editors
-apt install -y gedit vim
+apt install -y gedit vim geany
 
 #IDE's
 sudo snap install intellij-idea-community --classic
