@@ -11,6 +11,8 @@ sudo snap install intellij-idea-community --classic
 
 #version control
 apt install -y git
+#configure git to cache credentials
+git config credential.helper 'cache --timeout=3000000'
 
 #haskell
 apt install -y ghc haskell-stack
