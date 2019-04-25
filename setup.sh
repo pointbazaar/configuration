@@ -19,7 +19,8 @@ apt install -y ghc haskell-stack
 #upgrade that
 stack upgrade
 
-apt install -y gcc vlc baobap default-jdk nodejs
+#C toolchain etc
+apt install -y gcc make vlc baobap default-jdk nodejs
 
 #for timing and profiling applications how long they take
 apt install -y time
