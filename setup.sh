@@ -43,6 +43,8 @@ apt install -y inkscape
 apt install -y nginx
 #apt install -y apache2
 
+apt install -y net-tools
+
 #don't forget letsencrypt at certbot
 
 #mail server setup
