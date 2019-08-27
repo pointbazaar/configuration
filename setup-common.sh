@@ -20,7 +20,7 @@ stack upgrade
 apt install -y gcc make 
 
 #typescript toolchain [nodejs,typescript,angular]
-apt install -y nodejs node-typescript ng-common
+apt install -y nodejs node-typescript
 npm install -g angular-cli
 
 apt install -y baobap default-jdk 
