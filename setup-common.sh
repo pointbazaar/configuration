@@ -20,9 +20,14 @@ stack upgrade
 apt install -y gcc make 
 
 #typescript toolchain [nodejs,typescript,angular]
+#to get the latest nodejs:
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+
 apt install -y nodejs node-typescript
 apt install -y npm
 npm install -g @angular/cli
+
+
 
 apt install -y baobap default-jdk 
 
