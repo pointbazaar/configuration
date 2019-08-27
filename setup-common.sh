@@ -19,8 +19,10 @@ stack upgrade
 #C toolchain etc
 apt install -y gcc make 
 
+#typescript toolchain
+apt install -y nodejs node-typescript
 
-apt install -y baobap default-jdk nodejs
+apt install -y baobap default-jdk 
 
 #for timing and profiling applications how long they take
 apt install -y time
