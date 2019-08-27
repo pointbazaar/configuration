@@ -17,7 +17,7 @@ apt install -y ghc haskell-stack
 stack upgrade
 
 #C toolchain etc
-apt install -y gcc make 
+apt install -y gcc make nasm  
 
 #typescript toolchain [nodejs,typescript,angular]
 #to get the latest nodejs:
