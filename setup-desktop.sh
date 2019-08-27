@@ -20,7 +20,7 @@ apt install -y inkscape
 
 
 #pdf, images, videos
-sudo apt install -y feh vlc xpdf
+apt install -y feh vlc xpdf
 
-
-
+#IDE for C++ development
+apt install -y codeblocks
