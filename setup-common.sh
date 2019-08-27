@@ -21,6 +21,7 @@ apt install -y gcc make
 
 #typescript toolchain [nodejs,typescript,angular]
 apt install -y nodejs node-typescript
+apt install -y npm
 npm install -g angular-cli
 
 apt install -y baobap default-jdk 
