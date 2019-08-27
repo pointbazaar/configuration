@@ -1,6 +1,6 @@
 #!/bin/bash
 
-
+apt-get update
 
 #version control
 apt install -y git
