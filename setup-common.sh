@@ -59,3 +59,4 @@ apt install -y net-tools
 snap install -y tree
 
 apt install -y vim
+ln -s .vimrc ~/
