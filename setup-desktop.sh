@@ -26,3 +26,10 @@ apt install -y feh vlc xpdf
 
 #IDE for C++ development
 apt install -y codeblocks
+
+
+apt install -y zsh
+sudo chsh -s /usr/bin/zsh root 
+sudo chsh -s /usr/bin/zsh alex
+#install oh my zsh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
