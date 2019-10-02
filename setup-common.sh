@@ -11,10 +11,12 @@ git config --global core.excludesfile '~/configuration/.gitignore'
 
 
 
+#haskell is big and takes long to install especially with hackage and all the packages
+#so it is temporarily removed from this install script
 #haskell
-apt install -y ghc haskell-stack
+#apt install -y ghc haskell-stack
 #upgrade that
-stack upgrade
+#stack upgrade
 
 #C toolchain etc
 apt install -y gcc make nasm  
@@ -23,9 +25,11 @@ apt install -y gcc make nasm
 #to get the latest nodejs:
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
-apt install -y nodejs node-typescript
-apt install -y npm
-npm install -g @angular/cli
+#nodejs and angular are heavyweight
+#and take long to install and build and use too much bandwidth
+#apt install -y nodejs node-typescript
+#apt install -y npm
+#npm install -g @angular/cli
 
 
 
@@ -37,7 +41,7 @@ apt install -y time
 #for looking at system spec
 apt install -y screenfetch
 #build tools
-apt install -y maven gradle
+apt install -y maven
 
 
 

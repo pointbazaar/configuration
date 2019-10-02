@@ -6,7 +6,9 @@ bash setup-common.sh
 apt install -y gedit geany
 
 #IDE's
-sudo snap install intellij-idea-community --classic
+#intellij is too heavyweight and uses too much resources
+#it cannot be used reliably without a high-end computer
+#sudo snap install intellij-idea-community --classic
 
 
 
