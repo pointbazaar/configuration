@@ -1,0 +1,25 @@
+My Coding Style.
+
+- never use 'extends' for classes. 'extends' is not well composable because you can only 'extend' once per class. instead use 'implements'
+
+- when building a Framework, every class and every interface should be prefixed by the name of the Framework/Library, or an abbreviation thereof.
+
+- interfaces always start with a capital 'I'. e.g. 'IConsumer' 
+
+- files should not be longer than 300 lines
+
+- only one class/interface per file
+
+- there should be tests. if there are no tests, its a code smell.
+
+- prefer to use 'static' subroutines when no instances are needed. not everything needs object instances.
+
+- prefer to write package-private classes over public classes
+
+- use dependencies whenever possible and convenient.
+
+- performance is important
+
+- readability is important. use javadoc.
+
+- if a project has more than 300 files, it should be broken up into smaller, seperate projects.
