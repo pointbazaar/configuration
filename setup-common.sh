@@ -35,6 +35,9 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 apt install -y baobap default-jdk 
 
+#prolog
+apt install -y swi-prolog
+
 #for timing and profiling applications how long they take
 apt install -y time
 
