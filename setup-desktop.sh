@@ -28,7 +28,3 @@ apt install -y feh vlc xpdf
 apt install -y codeblocks
 
 
-sudo chsh -s /usr/bin/zsh root 
-sudo chsh -s /usr/bin/zsh alex
-#install oh my zsh
-wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
