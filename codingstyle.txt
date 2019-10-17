@@ -1,4 +1,4 @@
-My Coding Style.
+My Coding Style. (primarly for java)
 
 - never use 'extends' for classes. 'extends' is not well composable because you can only 'extend' once per class. instead use 'implements'
 
@@ -23,3 +23,5 @@ My Coding Style.
 - readability is important. use javadoc.
 
 - if a project has more than 300 files, it should be broken up into smaller, seperate projects.
+
+- use 'final' for local variables and arguments whenever possible. it makes no sense to assign to subroutine arguments.
