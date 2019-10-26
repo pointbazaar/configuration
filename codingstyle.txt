@@ -2,7 +2,7 @@ My Coding Style. (primarly for java)
 
 - never use 'extends' for classes. 'extends' is not well composable because you can only 'extend' once per class. instead use 'implements'
 
-- when building a Framework, every class and every interface should be prefixed by the name of the Framework/Library, or an abbreviation thereof.
+- when building a Framework, every class and every interface should be prefixed by the name of the Framework, or an abbreviation thereof. This is not required for libraries.
 
 - interfaces always start with a capital 'I'. e.g. 'IConsumer' 
 
@@ -25,3 +25,8 @@ My Coding Style. (primarly for java)
 - if a project has more than 300 files, it should be broken up into smaller, seperate projects.
 
 - use 'final' for local variables and arguments whenever possible. it makes no sense to assign to subroutine arguments.
+
+- do not use magic numbers. every constant int or char should be put in a variable. 
+  this means easier refactorings, as you only  have to change 1 file, and 1 line. 
+  Far more time is spent changing codes, rather than creating new ones, for successful applications.
+  So this practise saves time.
