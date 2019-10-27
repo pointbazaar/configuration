@@ -2,6 +2,8 @@ My Coding Style. (primarly for java)
 
 - never use 'extends' for classes. 'extends' is not well composable because you can only 'extend' once per class. instead use 'implements'
 
+- all classes should be 'final'
+
 - when building a Framework, every class and every interface should be prefixed by the name of the Framework, or an abbreviation thereof. This is not required for libraries.
 
 - interfaces always start with a capital 'I'. e.g. 'IConsumer' 
