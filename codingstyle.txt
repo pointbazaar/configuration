@@ -32,3 +32,5 @@ My Coding Style. (primarly for java)
   this means easier refactorings, as you only  have to change 1 file, and 1 line. 
   Far more time is spent changing codes, rather than creating new ones, for successful applications.
   So this practise saves time.
+
+- use java streams whenever possible. streams are more readable than loops.
