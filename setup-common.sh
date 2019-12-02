@@ -2,8 +2,9 @@
 
 apt-get update
 
-#version control
+#version control: git
 apt install -y git
+
 #configure git to cache credentials
 git config credential.helper 'cache --timeout=3000000'
 #set global gitignore, we already have downloaded this repo, it should be in home directory
@@ -18,19 +19,12 @@ git config --global core.excludesfile '~/configuration/.gitignore'
 #upgrade that
 #stack upgrade
 
-#C toolchain etc
+#C toolchain, nasm,  etc
 apt install -y gcc make nasm  
 
 #typescript toolchain [nodejs,typescript,angular]
 #to get the latest nodejs:
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-
-#nodejs and angular are heavyweight
-#and take long to install and build and use too much bandwidth
-#apt install -y nodejs node-typescript
-#apt install -y npm
-#npm install -g @angular/cli
-
 
 
 apt install -y baobap default-jdk 
@@ -52,14 +46,12 @@ apt install -y net-tools
 
 #don't forget letsencrypt at certbot
 
-#mail server setup
-#sudo apt-get install postfix
-#sudo apt-get install courier-pop
-#sudo apt-get install courier-imap
-#sudo apt install courier-authdaemon
 
 #see a tree view of filesystem
 snap install -y tree
+
+#file manager
+apt install -y ranger
 
 apt install -y vim
 ln -s .vimrc ~/
