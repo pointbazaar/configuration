@@ -15,3 +15,4 @@ wget https://repo1.maven.org/maven2/org/jooq/jooq-meta/3.12.3/jooq-meta-3.12.3.j
 
 wget https://repo1.maven.org/maven2/mysql/mysql-connector-java/8.0.18/mysql-connector-java-8.0.18.jar
 
+wget https://repo1.maven.org/maven2/javax/activation/activation/1.1.1/activation-1.1.1.jar
