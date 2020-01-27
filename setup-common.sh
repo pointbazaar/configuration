@@ -2,8 +2,17 @@
 
 apt-get update
 
+
 #version control: git
 apt install -y git
+
+
+#display comments
+git clone https://github.com/pointbazaar/comcat.git
+cd comcat
+./build.sh
+cd ..
+
 
 #for drawing graphs and such
 apt install -y graphviz 
