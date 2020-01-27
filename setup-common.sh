@@ -5,6 +5,9 @@ apt-get update
 #version control: git
 apt install -y git
 
+#for drawing graphs and such
+apt install -y graphviz 
+
 #configure git to cache credentials
 git config credential.helper 'cache --timeout=3000000'
 #set global gitignore, we already have downloaded this repo, it should be in home directory
