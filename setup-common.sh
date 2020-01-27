@@ -12,6 +12,7 @@ git clone https://github.com/pointbazaar/comcat.git
 cd comcat
 ./build.sh
 cd ..
+rm -rf comcat
 
 
 #for drawing graphs and such
