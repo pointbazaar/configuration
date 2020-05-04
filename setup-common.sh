@@ -57,3 +57,6 @@ apt install -y ranger
 
 apt install -y vim
 ln -s .vimrc ~/
+
+#Java OpenJdk
+sudo apt install openjdk-14-jre-headless  # version 14.0.1+7-1ubuntu1
