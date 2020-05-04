@@ -69,3 +69,6 @@ sudo apt -y install micro
 
 #Nginx Server Core
 sudo apt install -y nginx-core    # version 1.17.10-0ubuntu1
+
+Sudo apt install -y maven
+
