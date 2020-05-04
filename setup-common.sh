@@ -59,4 +59,13 @@ apt install -y vim
 ln -s .vimrc ~/
 
 #Java OpenJdk
-sudo apt install openjdk-14-jre-headless  # version 14.0.1+7-1ubuntu1
+sudo apt install -y openjdk-14-jre-headless  # version 14.0.1+7-1ubuntu1
+
+#MYSQL Client
+sudo apt install -y mysql-client-core-8.0     # version 8.0.20-0ubuntu0.20.04.1
+
+#Micro
+sudo apt -y install micro
+
+#Nginx Server Core
+sudo apt install -y nginx-core    # version 1.17.10-0ubuntu1
