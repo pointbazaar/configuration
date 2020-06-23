@@ -15,4 +15,4 @@ apt install -y codeblocks
 
 #convenient ssh client that remembers 
 #hosts and credentials
-snap install  termius
+snap install  termius-app
