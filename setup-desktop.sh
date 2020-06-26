@@ -19,5 +19,6 @@ apt install -y codeblocks
 snap install termius-app
 
 #install intellij manually
-#install android studio manually
+#install android studio
+sudo snap install --classic android-studio
 #install mysql-workbench manually
