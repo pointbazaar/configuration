@@ -23,9 +23,13 @@ snap install --classic intellij-idea-community
 #install android studio
 snap install --classic android-studio
 
+#-----------------------------------------
 #install mysql-workbench
 #HINT: you need to enable some permissions
 #for this snap in the ubuntu software center.
 #otherwise it will not accept passwords
+
+#To copy connections to other computers:
+#Tools->Configuration->Backup Connections
 snap install --candidate mysql-workbench-community
 
