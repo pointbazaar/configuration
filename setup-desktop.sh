@@ -1,5 +1,7 @@
 #!/bin/bash
 
+bash setup-common.sh
+
 #editors
 apt install -y gedit geany
 
@@ -15,4 +17,4 @@ apt install -y codeblocks
 
 #convenient ssh client that remembers 
 #hosts and credentials
-snap install  termius-app
+snap install termius-app
