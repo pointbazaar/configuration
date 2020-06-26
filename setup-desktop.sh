@@ -23,4 +23,6 @@ snap install --classic intellij-idea-community
 #install android studio
 snap install --classic android-studio
 
-#install mysql-workbench manually
+#install mysql-workbench
+snap install --candidate mysql-workbench-community
+
