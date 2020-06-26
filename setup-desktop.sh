@@ -18,7 +18,9 @@ apt install -y codeblocks
 #convenient ssh client that remembers hosts and credentials
 snap install termius-app
 
-#install intellij manually
+#install intellij
+snap install --classic intellij-idea-community
 #install android studio
-sudo snap install --classic android-studio
+snap install --classic android-studio
+
 #install mysql-workbench manually
