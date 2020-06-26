@@ -18,12 +18,5 @@ apt install -y codeblocks
 #convenient ssh client that remembers hosts and credentials
 snap install termius-app
 
-#install intellij with script from some repo
-cd /tmp
-git clone git@github.com:nagygergo/jetbrains-toolbox-install.git
-cd jetbrains-toolbox-install
-./jetbrains-toolbox.sh
-cd - #go back to the directory we came from
-
-#install android studio
-#TODO
+#install intellij manually
+#install android studio manually
