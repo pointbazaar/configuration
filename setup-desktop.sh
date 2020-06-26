@@ -20,3 +20,4 @@ snap install termius-app
 
 #install intellij manually
 #install android studio manually
+#install mysql-workbench manually
