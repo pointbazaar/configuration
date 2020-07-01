@@ -15,16 +15,13 @@
 #also, git should be installed
 
 git clone git@github.com:pointbazaar/codewars-solutions.git
-
 git clone git@github.com:pointbazaar/octofinsights.git
-
 git clone git@github.com:pointbazaar/taiman-onway.git
-
 git clone git@github.com:pointbazaar/BFD.git
-
 git clone git@github.com:pointbazaar/cs_hhu.git
-
 git clone git@github.com:pointbazaar/alexander-hansen.dev.git
-
 git clone git@github.com:pointbazaar/old_stuff.git
 
+#smalldragon
+git clone git@github.com:pointbazaar/smalldragon.git
+git clone git@github.com:pointbazaar/dragon-lexer.git
