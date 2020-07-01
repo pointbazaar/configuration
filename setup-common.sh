@@ -19,7 +19,7 @@ git config --global core.excludesfile '~/configuration/.gitignore'
 #C toolchain, nasm,  etc
 apt install -y gcc make nasm  
 
-apt install -y baobap default-jdk 
+apt install -y baobap
 
 #for timing and profiling applications how long they take
 apt install -y time
@@ -43,7 +43,8 @@ apt install -y vim
 ln -s .vimrc ~/
 
 #Java OpenJdk
-sudo apt install -y openjdk-14-jre-headless  # version 14.0.1+7-1ubuntu1
+#alternative: default-jdk
+sudo apt install -y openjdk-14-jdk  
 
 #MYSQL Client
 sudo apt install -y mysql-client-core-8.0     # version 8.0.20-0ubuntu0.20.04.1
