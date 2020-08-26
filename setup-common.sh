@@ -52,4 +52,8 @@ sudo apt install -y mysql-client-core-8.0     # version 8.0.20-0ubuntu0.20.04.1
 #Micro
 sudo apt -y install micro
 
-
+#Astyle http://astyle.sourceforge.net/astyle.html
+#Astyle is for indenting and formatting source files
+#astyle -t main.c
+#to indent main.c with tabs
+sudo apt -y install astyle
