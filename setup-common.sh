@@ -57,3 +57,8 @@ sudo apt -y install micro
 #astyle -t main.c
 #to indent main.c with tabs
 sudo apt -y install astyle
+
+#bat, the cat clone with wings
+#https://github.com/sharkdp/bat
+#command is 'batcat'
+sudo apt -y install bat
