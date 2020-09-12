@@ -35,3 +35,6 @@ autocmd FileType html inoremap \div <div class=""><Enter><Enter></div><Esc>ki
 autocmd FileType html inoremap \html <html><Enter><Enter></html><Esc>ki
 autocmd FileType html inoremap \head <head><Enter><meta charset="UTF-8"><Enter><Enter></head><Esc>ki
 autocmd FileType html inoremap \body <body><Enter><Enter></body><Esc>ki
+
+
+source ~/smalldragon/syntax-tools/vim/dotvimrc-append.txt
