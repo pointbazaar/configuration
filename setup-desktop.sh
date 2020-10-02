@@ -3,6 +3,7 @@ bash setup-common.sh
 
 #editors:
 #texstudio is for editing latex
+#geany is for my C Projects
 apt install -y gedit geany texstudio
 
 #graphic tools
@@ -12,8 +13,6 @@ apt install -y inkscape
 #pdf, images, videos
 apt install -y feh vlc xpdf
 
-#IDE for C/C++ development
-apt install -y codeblocks
 
 #convenient ssh client that remembers hosts and credentials
 snap install termius-app
