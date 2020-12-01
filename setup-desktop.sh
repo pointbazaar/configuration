@@ -32,3 +32,8 @@ snap install --classic android-studio
 #Tools->Configuration->Backup Connections
 snap install --candidate mysql-workbench-community
 
+
+#install youtube-dl
+#to download videos from youtube
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
