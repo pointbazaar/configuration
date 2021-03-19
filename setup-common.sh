@@ -19,8 +19,6 @@ git config --global core.excludesfile '~/configuration/.gitignore'
 #C toolchain, nasm,  etc
 apt install -y gcc make nasm  
 
-apt install -y baobap
-
 #for timing and profiling applications how long they take
 apt install -y time
 
