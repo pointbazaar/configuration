@@ -8,8 +8,10 @@ apt install -y git
 #for drawing graphs and such
 apt install -y graphviz 
 
+#for smalldragon development
 #C toolchain, nasm,  etc
-apt install -y gcc make nasm  
+apt install -y gcc make cmake nasm 
+apt install -y flex
 
 #for timing and profiling applications how long they take
 apt install -y time
