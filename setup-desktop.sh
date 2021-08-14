@@ -13,6 +13,7 @@ snap install termius-app
 
 #install intellij
 snap install --classic intellij-idea-community
+snap install --classic clion 
 
 #-----------------------------------------
 #install mysql-workbench
