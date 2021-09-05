@@ -1,6 +1,9 @@
 #!/bin/bash
 bash setup-common.sh
 
+#hwloc (graphical) (lstopo command) (see hardware topology)
+apt install -y hwloc
+
 #editors:
 #geany is for my C Projects
 apt install -y gedit geany 
