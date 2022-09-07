@@ -1,0 +1,16 @@
+this is my keymap for my preonic keyboard
+
+it is symlinked in in ~/qmk_firmware/keyboards/preonic/keymaps/pointbazaar
+
+to use it do following steps
+
+- connect keyboard via usb cable
+
+- $ qmk compile -kb preonic/rev1 -km pointbazaar
+
+- $ qmk flash -kb preonic/rev1 -km pointbazaar
+
+- press the reset button on the pcb
+
+
+that will flash the firmware
