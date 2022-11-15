@@ -30,9 +30,6 @@ ln -s .vimrc ~/
 #Java OpenJdk
 apt install -y openjdk-16-jdk  
 
-#MYSQL Client
-apt install -y mysql-client-core-8.0     # version 8.0.20-0ubuntu0.20.04.1
-
 apt -y install micro
 
 #bat, the cat clone with wings
