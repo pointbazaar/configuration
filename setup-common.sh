@@ -22,13 +22,10 @@ apt install -y screenfetch
 apt install -y maven
 
 #see a tree view of filesystem
-snap install -y tree
+apt install -y tree
 
 apt install -y vim
 ln -s .vimrc ~/
-
-#Java OpenJdk
-apt install -y openjdk-16-jdk  
 
 apt -y install micro
 
