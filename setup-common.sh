@@ -5,12 +5,17 @@ apt-get update
 
 apt install -y git
 
+# -- ssh utilities --
+# enables ssh with password on the commandline
+apt install -y sshpass
+
 #for drawing graphs and such
 apt install -y graphviz 
 
-#for smalldragon development
-#C toolchain, nasm,  etc
+# -- C and Assembly Toolchain --
 apt install -y gcc make cmake nasm 
+
+# -- Flex Lexer Generator for ESPL1000 Development --
 apt install -y flex
 
 #for timing and profiling applications how long they take
@@ -22,9 +27,9 @@ apt install -y screenfetch
 #see a tree view of filesystem
 apt install -y tree
 
+# -- Editors --
 apt install -y vim
 ln -s .vimrc ~/
-
 apt -y install micro
 
 #bat, the cat clone with wings
