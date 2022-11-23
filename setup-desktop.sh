@@ -4,7 +4,7 @@ bash setup-common.sh
 #hwloc (graphical) (lstopo command) (see hardware topology)
 apt install -y hwloc
 
-#editors:
+#Editors:
 #geany is for my C Projects
 apt install -y gedit geany 
 
@@ -15,9 +15,13 @@ apt install -y thunderbird
 apt install -y feh vlc xpdf inkscape
 
 #CLion, for C Development
-snap install --classic clion 
+#snap install --classic clion 
 
 #install VS Code
-snap install --classic code 
+#snap install --classic code 
 
+#Terminal Emulator
+apt install -y kitty
 
+#Browser
+apt install -y firefox-esr

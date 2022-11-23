@@ -19,8 +19,6 @@ apt install -y time
 #for looking at system spec
 apt install -y screenfetch
 
-apt install -y maven
-
 #see a tree view of filesystem
 apt install -y tree
 
