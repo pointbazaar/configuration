@@ -28,3 +28,6 @@ apt install -y firefox-esr
 
 #Audio System
 apt install -y pulsemixer
+
+#tiling window manager
+apt install -y qtile
