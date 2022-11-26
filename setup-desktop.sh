@@ -27,7 +27,7 @@ apt install -y kitty
 apt install -y firefox-esr
 
 #Audio System
-apt install -y pulsemixer
+apt install -y pulseaudio pulsemixer
+#Audio Sysyem restart. remember to unmute sound in pulsemixer
+systemctl --user restart pulseaudio.service
 
-#tiling window manager
-apt install -y qtile
