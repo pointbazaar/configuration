@@ -1,6 +1,4 @@
 # configuration
-configuration and install scripts
 
+configuration and install scripts for debian 
 
-the preferred desktop distro is
-Ubuntu 

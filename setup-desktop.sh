@@ -25,3 +25,6 @@ apt install -y kitty
 
 #Browser
 apt install -y firefox-esr
+
+#Audio System
+apt install -y pulsemixer
