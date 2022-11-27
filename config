@@ -17,24 +17,21 @@
 ;==========================================================
 
 [colors]
-;background = ${xrdb:color0:#222}
-background = #222
-background-alt = #444
-;foreground = ${xrdb:color7:#222}
-foreground = #dfdfdf
-foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
+background = #282A2E
+foreground = #C5C8C6
+primary = #F0C674
 alert = #bd2c40
+disabled = #707880
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
 height = 27
-;offset-x = 1%
-;offset-y = 1%
 radius = 6.0
-fixed-center = false
+fixed-center = true
+
+separator = |
+separator-foreground = ${colors.disabled}
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -42,28 +39,17 @@ foreground = ${colors.foreground}
 line-size = 3
 line-color = #f00
 
-border-size = 4
+border-size = 2
 border-color = #00000000
 
-padding-left = 0
-padding-right = 2
+padding = 1
+module-margin = 1
 
-module-margin-left = 1
-module-margin-right = 2
+font-0 = monospace ;2
 
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-2 = siji:pixelsize=10;1
-
-modules-left = network pulseaudio
+modules-left = network
 modules-center = date
-modules-right = filesystem memory cpu temperature
-
-tray-position = right
-tray-padding = 2
-;tray-background = #0063ff
-
-;override-redirect = true
+modules-right = filesystem memory cpu pulseaudio
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -78,24 +64,28 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%% used, %free% free
+format-mounted-prefix = "DISK "
+format-mounted-prefix-foreground = ${colors.primary}
+
+format-mounted = <label-mounted>
+
+label-mounted = %free% free
+
 label-unmounted = %mountpoint% not mounted
-label-unmounted-foreground = ${colors.foreground-alt}
+label-unmounted-foreground = ${colors.foreground}
 	
 [module/cpu]
 type = internal/cpu
 interval = 2
 format-prefix = "CPU "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-prefix-foreground = ${colors.primary}
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "MEM "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
+format-prefix = "RAM "
+format-prefix-foreground = ${colors.primary}
 label = %percentage_used%%
 
 [module/wlan]
@@ -110,59 +100,52 @@ label-connected = %essid%
 format-disconnected = <label-disconnected>
 format-disconnected-underline = ${self.format-connected-underline}
 label-disconnected = %ifname% disconnected
-label-disconnected-foreground = ${colors.foreground-alt}
+label-disconnected-foreground = ${colors.foreground}
 
 ramp-signal-0 = ?
 ramp-signal-1 = ?
 ramp-signal-2 = ?
 ramp-signal-3 = ?
 ramp-signal-4 = ?
-ramp-signal-foreground = ${colors.foreground-alt}
+ramp-signal-foreground = ${colors.foreground}
 
 [module/network]
 type = internal/network
-interface = enp1s0
+interface = enp0s31f6
 interface-type = wired
 interval = 3.0
 
-format-connected-underline = #55aa55
-format-connected-prefix = "IP "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = [%ifname%] %local_ip% 
+format-connected = <label-connected>
+format-connected-foreground = ${colors.primary}
+label-connected = %local_ip% 
 
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
+format-disconnected = <label-disconnected>
+label-disconnected = %ifname% disconnected
 
 [module/date]
 type = internal/date
 interval = 5
 
-date = " %Y-%m-%d"
+date = ""
+date-alt = "%A, %d.%m.%Y"
+
 time = %H:%M
+time-alt = ""
 
-format-prefix = TIME
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #0a6cf5
+label-foreground = ${colors.primary}
+label-alt-foreground = ${colors.primary}
 
-label = %date% -- %time%
+label = %date%%time%
 
 [module/pulseaudio]
-label-volume = VOL %percentage% %
 type = internal/pulseaudio
 
-; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
-; If not, uses default sink
-; sink = alsa_output.pci-0000_12_00.3.analog-stereo
+format-volume-prefix = "VOL "
+format-volume-prefix-foreground = ${colors.primary}
+format-volume = <label-volume>
 
-; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
-; Default: true
+label-volume = %percentage% %
 use-ui-max = true
-
-; Interval for volume increase/decrease (in percent points)
-; Default: 5
 interval = 5
 
 [module/temperature]
@@ -171,18 +154,16 @@ thermal-zone = 0
 warn-temperature = 60
 
 format = <ramp> <label>
-format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.foreground}
 
 ramp-0 = COLD
 ramp-1 = WARM
 ramp-2 = HOT
-ramp-foreground = ${colors.foreground-alt}
+ramp-foreground = ${colors.foreground}
 
 [settings]
 screenchange-reload = true
