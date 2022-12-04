@@ -99,6 +99,8 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
+fg = "#d75f5f"
+
 screens = [
     Screen(
         bottom = bar.Bar(
@@ -114,7 +116,9 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 widget.TextBox("custom config", name="default"),
-                widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                widget.TextBox("[&lt;M-r&gt; to spawn]", foreground=fg),
+                widget.TextBox("[&lt;M-ctrl-r&gt; to reload config]", foreground=fg),
+                widget.TextBox("[&lt;M-w&gt; to close window]", foreground=fg),
                 # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
                 # widget.StatusNotifier(),
                 widget.Systray(),
