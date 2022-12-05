@@ -14,6 +14,7 @@ if [[ -e /home/alex/.ssh/id_ed25519 ]]; then
 	echo "ssh keys exist already"
 else
 	echo "creating ssh keys"
+	mkdir /home/alex/.ssh
 	ssh-keygen -t ed25519 -C "alex23667@gmail.com" -N "" -f /home/alex/.ssh/id_ed25519
 	eval "$(ssh-agent -s)"
 	ssh-add /home/alex/.ssh/id_ed25519

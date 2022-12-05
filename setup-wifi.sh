@@ -7,3 +7,6 @@ apt install -y network-manager
 
 #nmcli dev wifi list
 #nmcli dev wifi connect $network-ssid password $password
+
+#work laptop:
+#apt install -y firmware-atheros

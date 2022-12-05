@@ -16,6 +16,10 @@ deb-src http://security.debian.org/debian-security bullseye-security main non-fr
 deb http://deb.debian.org/debian/ bullseye-updates main non-free contrib
 deb-src http://deb.debian.org/debian/ bullseye-updates main non-free contrib
 
+#just for linux kernel, on the work laptop
+#deb http://deb.debian.org/debian/ testing main non-free contrib
+#deb-src http://deb.debian.org/debian/ testing main non-free contrib 
+
 # This system was installed using small removable media
 # (e.g. netinst, live or single CD). The matching "deb cdrom"
 # entries were disabled at the end of the installation process.

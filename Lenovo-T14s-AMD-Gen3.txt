@@ -1,0 +1,10 @@
+
+# had to use debian 'testing' repository to get recent enough kernel
+# to get the wifi working. see
+# https://wiki.debian.org/InstallingDebianOn/Thinkpad/T14Gen2AMD 
+
+# to get the wifi working
+apt-get install firmware-atheros
+
+# to get the graphics working properly and detect external monitor:
+apt-get install firmware-amd-graphics libgl1-mesa-dri libglx-mesa0 mesa-vulkan-drivers xserver-xorg-video-all
