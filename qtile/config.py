@@ -58,7 +58,8 @@ groups = [
         Group(name = "1", label = "1 - dev", matches=[Match(wm_class=["kitty"])]),
         Group(name = "2", label = "2 - web", matches=[Match(wm_class=["Firefox"])]),
         Group(name = "3", label = "3"),
-        Group(name = "4", label = "4"),
+        Group(name = "4", label = "4 - games", matches=[Match(wm_class=["steam"])]),
+        Group(name = "5", label = "5"),
 ]
 
 for i in groups:
