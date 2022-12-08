@@ -37,4 +37,4 @@ autocmd FileType html inoremap \head <head><Enter><meta charset="UTF-8"><Enter><
 autocmd FileType html inoremap \body <body><Enter><Enter></body><Esc>ki
 
 
-source ~/smalldragon/syntax-tools/vim/dotvimrc-append.txt
+#source ~/smalldragon/syntax-tools/vim/dotvimrc-append.txt
