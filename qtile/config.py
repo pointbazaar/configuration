@@ -95,8 +95,8 @@ extension_defaults = widget_defaults.copy()
 
 fg = "#d75f5f"
 
-screens = [
-    Screen(
+def make_screen():
+    myscreen = Screen(
         bottom = bar.Bar(
             [
                 widget.CurrentLayout(),
@@ -113,16 +113,16 @@ screens = [
                 widget.TextBox("[&lt;M-r&gt; to spawn]", foreground=fg),
                 widget.TextBox("[&lt;M-ctrl-r&gt; to reload config]", foreground=fg),
                 widget.TextBox("[&lt;M-w&gt; to close window]", foreground=fg),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
+                widget.Clock(),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
-    ),
-]
+    )
+    return myscreen
+
+screens = [make_screen(), make_screen()]
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
