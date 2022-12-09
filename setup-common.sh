@@ -32,10 +32,14 @@ apt install -y screenfetch
 #see a tree view of filesystem
 apt install -y tree
 
-# -- Editors --
+#favorite file explorer
+apt install -y ranger
+
+# -- Editors (VIM)--
 apt install -y vim
+apt install -y exuberant-ctags
 ln -s .vimrc ~/
-apt -y install micro
+ln -s .ctags ~/
 
 #bat, the cat clone with wings
 #https://github.com/sharkdp/bat

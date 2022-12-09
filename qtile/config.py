@@ -56,7 +56,7 @@ keys = [
 
 groups = [
         Group(name = "1", label = "1 - dev", matches=[Match(wm_class=["kitty"])]),
-        Group(name = "2", label = "2 - web", matches=[Match(wm_class=["Firefox"])]),
+        Group(name = "2", label = "2 - web", matches=[Match(wm_class=["Firefox","xpdf","Xpdf"])]),
         Group(name = "3", label = "3 - edit", matches=[Match(wm_class=["geany"])]),
         Group(name = "4", label = "4 - games", matches=[Match(wm_class=["steam"])]),
         Group(name = "5", label = "5"),
@@ -89,15 +89,15 @@ layouts = [
 
 widget_defaults = dict(
     font="monospace",
-    fontsize=12,
+    fontsize=14,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
 fg = "#d75f5f"
 
-screens = [
-    Screen(
+def make_screen():
+    myscreen = Screen(
         bottom = bar.Bar(
             [
                 widget.CurrentLayout(),
@@ -114,16 +114,16 @@ screens = [
                 widget.TextBox("[&lt;M-r&gt; to spawn]", foreground=fg),
                 widget.TextBox("[&lt;M-ctrl-r&gt; to reload config]", foreground=fg),
                 widget.TextBox("[&lt;M-w&gt; to close window]", foreground=fg),
-                # NB Systray is incompatible with Wayland, consider using StatusNotifier instead
-                # widget.StatusNotifier(),
-                widget.Systray(),
+                widget.Clock(),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
-    ),
-]
+    )
+    return myscreen
+
+screens = [make_screen(), make_screen()]
 
 dgroups_key_binder = None
 dgroups_app_rules = []  # type: list

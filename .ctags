@@ -1,0 +1,16 @@
+--recurse=yes
+--exclude=.git
+--exclude=BUILD
+--exclude=.svn
+--exclude=log/*
+--exclude=\*.o
+--exclude=\*.swp
+--exclude=\*.bak
+--exclude=\*.pyc
+--exclude=\*.class
+--exclude=\*.sln
+--exclude=\*.csproj
+--exclude=\*.csproj.user
+--exclude=\*.cache
+--exclude=\*.dll
+--exclude=\*.pdb
