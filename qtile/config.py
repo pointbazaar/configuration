@@ -56,7 +56,7 @@ keys = [
 
 groups = [
         Group(name = "1", label = "1 - dev", matches=[Match(wm_class=["kitty"])]),
-        Group(name = "2", label = "2 - web", matches=[Match(wm_class=["Firefox"])]),
+        Group(name = "2", label = "2 - web", matches=[Match(wm_class=["Firefox","xpdf","Xpdf"])]),
         Group(name = "3", label = "3 - edit", matches=[Match(wm_class=["geany"])]),
         Group(name = "4", label = "4"),
 ]
@@ -88,7 +88,7 @@ layouts = [
 
 widget_defaults = dict(
     font="monospace",
-    fontsize=12,
+    fontsize=14,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
