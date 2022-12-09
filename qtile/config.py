@@ -58,7 +58,7 @@ groups = [
         Group(name = "1", label = "1 - dev", matches=[Match(wm_class=["kitty"])]),
         Group(name = "2", label = "2 - web", matches=[Match(wm_class=["Firefox","xpdf","Xpdf"])]),
         Group(name = "3", label = "3 - edit", matches=[Match(wm_class=["geany"])]),
-        Group(name = "4", label = "4 - games", matches=[Match(wm_class=["steam"])]),
+        Group(name = "4", label = "4 - games", matches=[Match(wm_class=["steam","Steam"])]),
         Group(name = "5", label = "5"),
 ]
 
