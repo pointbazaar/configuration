@@ -107,6 +107,8 @@ extension_defaults = widget_defaults.copy()
 def make_screen():
     return Screen(
         bottom = make_bar(),
+        # link for image
+        # https://pixabay.com/get/gde77e33939eabe6d80c038bcaf154f29d8cfaae8f3f36a76c10e2c1db24981e45b86d0d13b87e74d79f3b91bb943bd62f2a4bc5edf82502a9f802f1e63bbc136f59d974730be92537e2b855f7cad1f7f_1920.jpg
         wallpaper = "~/Pictures/space.png"
     )
 
