@@ -8,4 +8,4 @@ pip install qtile
 # compositor
 apt install -y picom
 
-
+ln -s /home/alex/configuration/.xinitrc /home/alex/.xinitrc
