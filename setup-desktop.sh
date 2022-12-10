@@ -25,6 +25,7 @@ apt install -y kitty
 
 #Browser
 apt install -y firefox-esr
+apt install -y qutebrowser
 
 #Audio System
 apt install -y pulseaudio pulsemixer
