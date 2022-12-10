@@ -35,32 +35,39 @@ keys = [
     Key([mod, "control"], adown, 	lazy.layout.grow_down(), 	desc="Grow window down"),
     Key([mod, "control"], aup, 		lazy.layout.grow_up(), 		desc="Grow window up"),
     
-    # Toggle between split and unsplit sides of stack.
-    # Split = all windows displayed
-    # Unsplit = 1 window displayed, like Max layout, but still with
-    # multiple stack panes
-    Key(
-        [mod, "shift"],
-        "Return",
-        lazy.layout.toggle_split(),
-        desc="Toggle between split and unsplit sides of stack",
-    ),
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    # Toggle between different layouts as defined below
-    # Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 ]
 
+def grpstr(n, s):
+    return "["+str(n)+"] "+s
+
 groups = [
-        Group(name = "1", label = "1 - dev", matches=[Match(wm_class=["kitty"])]),
-        Group(name = "2", label = "2 - web", matches=[Match(wm_class=["Firefox","xpdf","Xpdf"])]),
-        Group(name = "3", label = "3 - edit", matches=[Match(wm_class=["geany"])]),
-        Group(name = "4", label = "4 - games", matches=[Match(wm_class=["steam","Steam"])]),
-        Group(name = "5", label = "5"),
+        Group(
+            name = "1", 
+            label = grpstr(1, "dev"), 
+            spawn = "kitty",
+            exclusive = True,
+            matches=[Match(wm_class=["kitty"])]
+        ),
+        Group(
+            name = "2", 
+            label = grpstr(2, "web"), 
+            spawn = "firefox",
+            exclusive = False,
+            matches=[Match(wm_class=["Firefox","xpdf","Xpdf"])]
+        ),
+        Group(name = "3", label = grpstr(3, "edit"), matches=[Match(wm_class=["geany"])]),
+        Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),
+        Group(name = "5", label = grpstr(5, "")),
 ]
+
+color_fg           = "#d75f5f"
+color_border       = "#200000"
+color_border_focus = "#c00000"
 
 for i in groups:
     keys.extend(
@@ -77,11 +84,12 @@ for i in groups:
 
 layouts = [
     layout.Columns(
-		border_normal = "#200000",
-		border_focus = "#c00000",
-		border_focus_stack=["#d75f5f", "#8f3d3d"], 
-		border_width = 5,
-		margin = 0,
+		border_normal = color_border,
+		border_focus  = color_border_focus,
+		border_width  = 5,
+		margin        = 3,
+        wrap_focus_columns = False,
+        wrap_focus_rows    = False,
 		fair = False,
 	),
     layout.Max(),
@@ -91,37 +99,42 @@ widget_defaults = dict(
     font="monospace",
     fontsize=14,
     padding=3,
+    foreground=color_fg,
 )
 extension_defaults = widget_defaults.copy()
 
-fg = "#d75f5f"
-
 def make_screen():
-    myscreen = Screen(
-        bottom = bar.Bar(
-            [
-                widget.CurrentLayout(),
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.WindowName(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.TextBox("custom config", name="default"),
-                widget.TextBox("[&lt;M-r&gt; to spawn]", foreground=fg),
-                widget.TextBox("[&lt;M-ctrl-r&gt; to reload config]", foreground=fg),
-                widget.TextBox("[&lt;M-w&gt; to close window]", foreground=fg),
-                widget.Clock(),
-            ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
-        ),
+    return Screen(
+        bottom = make_bar()
     )
-    return myscreen
+
+def make_bar():
+    return bar.Bar(
+        [
+            widget.GroupBox(
+                active=color_fg, 
+                inactive=color_border,
+                highlight_color=color_border,
+                highlight_method='line',
+                use_mouse_wheel=False,
+            ),
+            widget.Prompt(),
+            #widget.Sep(padding=12),
+            #widget.WindowName(),
+            widget.Chord(
+                chords_colors={
+                    "launch": (color_fg, "#ffffff"),
+                },
+                name_transform=lambda name: name.upper(),
+            ),
+            widget.Spacer(),
+            #widget.TextBox("[&lt;M-r&gt; - spawn]"),
+            #widget.TextBox("[&lt;M-ctrl-r&gt; - reload config]"),
+            #widget.TextBox("[&lt;M-w&gt; - close window]"),
+            widget.Clock(),
+        ],
+        24,
+    )
 
 screens = [make_screen(), make_screen()]
 
