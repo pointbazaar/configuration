@@ -135,6 +135,7 @@ def make_bar():
             widget.Clock(),
         ],
         24,
+        background=color_border+"90"
     )
 
 screens = [make_screen(), make_screen()]
