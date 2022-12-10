@@ -43,5 +43,6 @@ ln -s .ctags ~/
 
 #bat, the cat clone with wings
 #https://github.com/sharkdp/bat
-#command is 'batcat'
+#command is 'batcat' or 'bat'
 apt -y install bat
+ln -s /usr/bin/batcat /usr/bin/bat
