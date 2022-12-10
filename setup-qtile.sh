@@ -9,3 +9,6 @@ pip install qtile
 apt install -y picom
 
 ln -s /home/alex/configuration/.xinitrc /home/alex/.xinitrc
+
+# lockscreen (suckless, slock)
+apt install -y slock
