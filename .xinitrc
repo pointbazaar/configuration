@@ -1,1 +1,2 @@
+picom &
 exec qtile start
