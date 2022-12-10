@@ -67,7 +67,8 @@ groups = [
 
 color_fg           = "#d75f5f"
 color_border       = "#200000"
-color_border_focus = "#c00000"
+color_border_focus = "#f00000"
+color_transparent  = "#000000"
 
 for i in groups:
     keys.extend(
@@ -87,7 +88,7 @@ layouts = [
 		border_normal = color_border,
 		border_focus  = color_border_focus,
 		border_width  = 5,
-		margin        = 3,
+		margin        = 6,
         wrap_focus_columns = False,
         wrap_focus_rows    = False,
 		fair = False,
@@ -114,7 +115,7 @@ def make_bar():
         [
             widget.GroupBox(
                 active=color_fg, 
-                inactive=color_border,
+                inactive=color_fg+"30",
                 highlight_color=color_border,
                 highlight_method='line',
                 use_mouse_wheel=False,
