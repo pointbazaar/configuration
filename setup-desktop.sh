@@ -22,6 +22,7 @@ apt install -y feh vlc xpdf inkscape
 
 #Terminal Emulator
 apt install -y kitty
+ln -s /home/alex/configuration/kitty/kitty.conf /home/alex/.config/kitty/kitty.conf
 
 #Browser
 apt install -y firefox-esr
