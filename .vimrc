@@ -21,3 +21,7 @@ set wildmode=longest,list,full
 set noerrorbells
 
 set background=dark
+
+"ctags stuff, do upward search for tags file
+"https://stackoverflow.com/questions/5017500/vim-difficulty-setting-up-ctags-source-in-subdirectories-dont-see-tags-file-i
+set tags=tags;/
