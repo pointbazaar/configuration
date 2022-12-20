@@ -25,3 +25,9 @@ set background=dark
 "ctags stuff, do upward search for tags file
 "https://stackoverflow.com/questions/5017500/vim-difficulty-setting-up-ctags-source-in-subdirectories-dont-see-tags-file-i
 set tags=tags;/
+
+"ctags command remapping (using these keys bc they are where my arrow keys are
+"physically)
+"to jump to definition:
+nnoremap <C-c> <C-]>
+"to go back in the tags stack: <C-t>
