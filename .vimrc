@@ -31,3 +31,9 @@ set tags=tags;/
 "to jump to definition:
 nnoremap <C-c> <C-]>
 "to go back in the tags stack: <C-t>
+
+
+
+"disable the automatic wrapping of long lines
+:set textwidth=0
+:set wrapmargin=0
