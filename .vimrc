@@ -15,6 +15,9 @@ set cursorline
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 
+set list
+set listchars=tab:→·
+
 "enable autocompletion?
 set wildmode=longest,list,full
 
