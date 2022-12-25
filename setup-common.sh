@@ -38,8 +38,8 @@ apt install -y ranger
 # -- Editors (VIM)--
 apt install -y vim
 apt install -y exuberant-ctags
-ln -s /home/alex/configuration/.vimrc ~/.vimrc
-ln -s /home/alex/configuration/.ctags ~/.ctags
+ln -s /home/alex/configuration/.vimrc /home/alex/.vimrc
+ln -s /home/alex/configuration/.ctags /home/alex/.ctags
 
 #bat, the cat clone with wings
 #https://github.com/sharkdp/bat
