@@ -33,3 +33,5 @@ apt install -y pulseaudio pulsemixer
 #Audio Sysyem restart. remember to unmute sound in pulsemixer
 systemctl --user restart pulseaudio.service
 
+# for doing CAD Designs (FreeCAD)
+apt install -y freecad
