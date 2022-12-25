@@ -135,7 +135,7 @@ def make_bar():
             #widget.TextBox("[&lt;M-r&gt; - spawn]"),
             #widget.TextBox("[&lt;M-ctrl-r&gt; - reload config]"),
             #widget.TextBox("[&lt;M-w&gt; - close window]"),
-            widget.Clock(),
+            widget.Clock(format="%A, %d.%m.%Y        %H:%M"),
         ],
         24,
         background=color_border+"90"
