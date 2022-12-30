@@ -46,3 +46,6 @@ ln -s /home/alex/configuration/.ctags /home/alex/.ctags
 #command is 'batcat' or 'bat'
 apt -y install bat
 ln -s /usr/bin/batcat /usr/bin/bat
+
+#ack which is similar to grep
+apt install -y ack
