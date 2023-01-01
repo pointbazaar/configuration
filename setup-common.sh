@@ -50,3 +50,6 @@ cp /home/alex/configuration/htoprc /home/alex/.config/htop/htoprc
 #command is 'batcat' or 'bat'
 apt -y install bat
 ln -s /usr/bin/batcat /usr/bin/bat
+
+#ack which is similar to grep
+apt install -y ack
