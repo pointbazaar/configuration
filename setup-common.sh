@@ -49,3 +49,7 @@ ln -s /usr/bin/batcat /usr/bin/bat
 
 #ack which is similar to grep
 apt install -y ack
+ln -s /home/alex/configuration/.ackrc /home/alex/.ackrc
+
+# Zip Files
+apt install -y zip
