@@ -41,6 +41,10 @@ apt install -y exuberant-ctags
 ln -s /home/alex/configuration/.vimrc /home/alex/.vimrc
 ln -s /home/alex/configuration/.ctags /home/alex/.ctags
 
+# htop
+apt install -y htop
+cp /home/alex/configuration/htoprc /home/alex/.config/htop/htoprc
+
 #bat, the cat clone with wings
 #https://github.com/sharkdp/bat
 #command is 'batcat' or 'bat'
