@@ -8,7 +8,7 @@ apt-get update
 apt install -y git
 git config --global user.email "alexander.hansen@9elements.com"
 git config --global user.name "Alexander Hansen"
-
+git config pull.rebase false
 
 # -- ssh utilities --
 # enables ssh with password on the commandline
