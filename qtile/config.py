@@ -3,7 +3,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
-mod = "mod4"
+mod = "mod4" # OS key
 terminal = guess_terminal()
 
 # these are the arrow keys in my keymap
@@ -34,10 +34,11 @@ keys = [
     Key([mod, "control"], aright, 	lazy.layout.grow_right(), 	desc="Grow window to the right"),
     Key([mod, "control"], adown, 	lazy.layout.grow_down(), 	desc="Grow window down"),
     Key([mod, "control"], aup, 		lazy.layout.grow_up(), 		desc="Grow window up"),
-    
+
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
+    Key([mod], "l", lazy.spawn("slock", shell=True), desc="lock the screen"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 ]
@@ -58,7 +59,7 @@ groups = [
             label = grpstr(2, "web"), 
             spawn = "firefox",
             exclusive = False,
-            matches=[Match(wm_class=["Firefox","xpdf","Xpdf"])]
+            matches=[Match(wm_class=["Firefox","Firefox-esr","xpdf","Xpdf"])]
         ),
         Group(name = "3", label = grpstr(3, "edit"), matches=[Match(wm_class=["geany"])]),
         Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),
@@ -109,7 +110,7 @@ def make_screen():
         bottom = make_bar(),
         # link for image
         # https://pixabay.com/get/gde77e33939eabe6d80c038bcaf154f29d8cfaae8f3f36a76c10e2c1db24981e45b86d0d13b87e74d79f3b91bb943bd62f2a4bc5edf82502a9f802f1e63bbc136f59d974730be92537e2b855f7cad1f7f_1920.jpg
-        wallpaper = "~/Pictures/space.png"
+        wallpaper = "~/Pictures/wp-firewatch2.jpg"
     )
 
 def make_bar():
