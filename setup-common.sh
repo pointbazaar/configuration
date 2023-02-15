@@ -12,7 +12,8 @@ git config pull.rebase false
 
 # -- ssh utilities --
 # enables ssh with password on the commandline
-apt install -y sshpass
+apt install -y ssh sshpass
+ln -s /home/alex/configuration/.ssh/config /home/alex/.ssh/config
 
 #for drawing graphs and such
 apt install -y graphviz 
