@@ -114,3 +114,9 @@ bind('<return>', 'prompt-accept',          'prompt') # prompt accept
 bind('<escape>', 'mode-leave',             'prompt') # prompt leave
 bind('<up>',     'prompt-item-focus prev', 'prompt') # prompt item focus prev
 bind('<down>',   'prompt-item-focus prev', 'prompt') # prompt item focus prev
+
+#### keybindings for 'yesno' mode ####
+
+bind('<escape>', 'mode-leave',             'yesno') # mode leave
+bind('y', 'prompt-accept yes',             'yesno') # yes
+bind('n', 'prompt-accept no',              'yesno') # no
