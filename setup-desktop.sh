@@ -26,6 +26,8 @@ ln -s /home/alex/configuration/kitty/kitty.conf /home/alex/.config/kitty/kitty.c
 
 #Browser
 apt install -y qutebrowser
+mkdir -p /home/alex/.config/qutebrowser
+ln -s /home/alex/configuration/qutebrowser/config.py /home/alex/.config/qutebrowser/config.py
 
 #Audio System
 apt install -y pulseaudio pulsemixer
