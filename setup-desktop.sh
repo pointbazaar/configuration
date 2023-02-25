@@ -25,7 +25,6 @@ apt install -y kitty
 ln -s /home/alex/configuration/kitty/kitty.conf /home/alex/.config/kitty/kitty.conf
 
 #Browser
-apt install -y firefox-esr
 apt install -y qutebrowser
 
 #Audio System

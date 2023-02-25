@@ -59,11 +59,11 @@ groups = [
             label = grpstr(2, "web"), 
             spawn = "firefox",
             exclusive = False,
-            matches=[Match(wm_class=["Firefox","Firefox-esr","xpdf","Xpdf"])]
+            matches=[Match(wm_class=["Firefox","Firefox-esr","xpdf","Xpdf","qutebrowser"])]
         ),
         Group(name = "3", label = grpstr(3, "edit"), matches=[Match(wm_class=["geany"])]),
         Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),
-        Group(name = "5", label = grpstr(5, "")),
+        Group(name = "5", label = grpstr(5, ""), matches=[Match(wm_class=["freecad","FreeCAD"])]),
 ]
 
 color_fg           = "#d75f5f"
@@ -110,7 +110,7 @@ def make_screen():
         bottom = make_bar(),
         # link for image
         # https://pixabay.com/get/gde77e33939eabe6d80c038bcaf154f29d8cfaae8f3f36a76c10e2c1db24981e45b86d0d13b87e74d79f3b91bb943bd62f2a4bc5edf82502a9f802f1e63bbc136f59d974730be92537e2b855f7cad1f7f_1920.jpg
-        wallpaper = "~/Pictures/wp-firewatch2.jpg"
+        wallpaper = "~/Pictures/space.png"
     )
 
 def make_bar():
