@@ -57,7 +57,7 @@ groups = [
         Group(
             name = "2", 
             label = grpstr(2, "web"), 
-            spawn = "firefox",
+            spawn = "qutebrowser",
             exclusive = False,
             matches=[Match(wm_class=["Firefox","Firefox-esr","xpdf","Xpdf","qutebrowser"])]
         ),
