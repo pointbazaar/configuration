@@ -120,3 +120,6 @@ bind('<down>',   'prompt-item-focus prev', 'prompt') # prompt item focus prev
 bind('<escape>', 'mode-leave',             'yesno') # mode leave
 bind('y', 'prompt-accept yes',             'yesno') # yes
 bind('n', 'prompt-accept no',              'yesno') # no
+
+bind('Y', 'prompt-accept --save yes',      'yesno') # yes always
+bind('N', 'prompt-accept --save no',       'yesno') # no  always
