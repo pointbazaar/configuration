@@ -73,6 +73,9 @@ c.auto_save.session            = True;
 c.session.lazy_restore         = True;
 
 
+#### Notifications ####
+c.content.notifications.enabled = True;
+
 #### keybindings for 'normal' mode ####
 
 bind(':',           'set-cmd-text :',  'normal'); # command prompt
