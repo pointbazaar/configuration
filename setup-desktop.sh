@@ -11,8 +11,11 @@ apt install -y gedit geany
 #Email
 apt install -y thunderbird
 
-#pdf, images, videos, svg editing
-apt install -y feh vlc xpdf inkscape
+#images, videos, svg editing
+apt install -y feh vlc inkscape
+
+#pdf and document viewer
+apt install -y zathura
 
 #CLion, for C Development
 #snap install --classic clion 

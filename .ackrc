@@ -1,1 +1,3 @@
 --ignore-file=is:tags
+--ignore-file=ext:map
+-i
