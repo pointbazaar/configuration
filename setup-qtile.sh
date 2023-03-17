@@ -5,9 +5,6 @@ apt install -y python3-pip python3-xcffib python3-cairocffi
 
 pip install qtile
 
-# compositor
-apt install -y picom
-
 ln -s /home/alex/configuration/.xinitrc /home/alex/.xinitrc
 
 # lockscreen (suckless, slock)

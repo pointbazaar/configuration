@@ -19,7 +19,10 @@ ln -s /home/alex/configuration/.ssh/config /home/alex/.ssh/config
 apt install -y graphviz 
 
 # -- C and Assembly Toolchain --
-apt install -y gcc make cmake nasm 
+apt install -y gcc make cmake nasm
+
+# I2C Bus Tools (i2cdetect, ...)
+apt install -y i2ctools
 
 # -- Flex Lexer Generator for ESPL1000 Development --
 apt install -y flex

@@ -16,6 +16,8 @@ apt install -y feh vlc inkscape
 
 #pdf and document viewer
 apt install -y zathura
+mkdir /etc/config
+cp zathurarc /etc/config/
 
 #CLion, for C Development
 #snap install --classic clion 
