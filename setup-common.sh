@@ -21,8 +21,8 @@ apt install -y graphviz
 # -- C and Assembly Toolchain --
 apt install -y gcc make cmake nasm
 
-# I2C Bus Tools (i2cdetect, ...)
-apt install -y i2ctools
+# I2C Bus Tools (i2cdetect, ...), gpio tools (gpiodetect, gpioinfo)
+apt install -y i2ctools gpiod
 
 # -- Flex Lexer Generator for ESPL1000 Development --
 apt install -y flex
