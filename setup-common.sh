@@ -3,11 +3,15 @@
 
 apt-get update
 
+# setup sudo and add ourselves to sudo group
+apt install -y sudo
+usermod -aG sudo alex
 
 # setup git
 apt install -y git
 git config --global user.email "alexander.hansen@9elements.com"
 git config --global user.name "Alexander Hansen"
+git config --global core.editor vim
 git config pull.rebase false
 
 # -- ssh utilities --
@@ -21,8 +25,10 @@ apt install -y graphviz
 # -- C and Assembly Toolchain --
 apt install -y gcc make cmake nasm
 
-# I2C Bus Tools (i2cdetect, ...), gpio tools (gpiodetect, gpioinfo)
-apt install -y i2ctools gpiod
+# I2C Bus Tools (i2cdetect, ...)
+# gpio tools (gpiodetect, gpioinfo)
+# smbios tools (dmidecode)
+apt install -y i2ctools gpiod dmidecode
 
 # -- Flex Lexer Generator for ESPL1000 Development --
 apt install -y flex
