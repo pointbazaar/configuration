@@ -1,0 +1,32 @@
+## my notes, based on official Arch install Guide
+## https://wiki.archlinux.org/title/installation_guide
+
+## this is not a script since it involves manual steps
+## such as plugging things in/out and don't want to
+## overwrite the live usb by accident lol
+
+## set timezone
+ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+hwclock --systohc
+
+## edit /etc/locale.gen
+## and uncomment "en_US.UTF-8 UTF-8"
+locale-gen
+echo "LANG=en_US.UTF-8\n" > /etc/locale.conf
+
+## hostname, change for laptop
+echo "zbox\n" > /etc/hostname
+
+## set root password
+passwd
+
+## TODO: install grub bootloader
+
+## exit chroot environment
+exit
+
+## umount partitions
+umount -R /mnt
+
+echo "now reboot, remove stick"
+echo "continue with setup-arch-part2.sh"

@@ -1,0 +1,70 @@
+## my notes, based on official Arch install Guide
+## https://wiki.archlinux.org/title/installation_guide
+
+## this is not a script since it involves manual steps
+## such as plugging things in/out and don't want to
+## overwrite the live usb by accident lol
+
+## assuming en US keyboard layout.
+
+## verify internet connection
+ping archlinux.org
+
+## sync time
+timedatectl
+
+## format the disk where to install Arch
+fdisk /dev/sda
+## create 2 partitions
+# (1) /dev/sda1  4 GB EFI SYSTEM
+# (3) /dev/sda2  Rest for ext4 / Linux Filesystem
+
+## filesystem encryption ##
+cryptsetup -y -v luksFormat /dev/sda2
+cryptsetup open /dev/sda2 root
+mkfs.ext4 /dev/mapper/root
+mount /dev/mapper/root /mnt
+
+## test cryptsetup ##
+umount /mnt
+cryptsetup close root
+cryptsetup open /dev/sda2 root
+mount /dev/mapper/root /mnt
+umount /mnt
+
+## configure mkinitcpio, edit /etc/mkinitcpio.conf
+## important: udev, keyboard, keymap, encrypt
+# HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block encrypt filesystems fsck)
+
+## find UUID by "ls -l /dev/disk/by-uuid"
+## edit /etc/default/grub
+# append kernel parameters to
+# GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=UUID=device-UUID:root root=/dev/mapper/root"
+grub-mkconfig -o /boot/grub/grub.cfg
+
+# create EFI System Partition, Swap Partition
+mkfs.fat -F 32 /dev/sda1
+mkfs.ext4 /dev/sda2
+
+## mount at /mnt, /mnt/boot
+mkdir -p /mnt/boot
+mount /dev/sda2 /mnt
+mount /dev/sda1 /mnt/boot
+
+## need both microcode packages,
+## script should work for intel and amd systems
+
+## regenerate grub config with ucode
+grub-mkconfig -o /boot/grub/grub.cfg
+
+## to verify after booting into the new system:
+# journalctl -k --grep=microcode
+
+pacstrap -K /mnt base linux linux-firmware amd-ucode intel-ucode dhcp networkmanager sof-firmware grub efibootmgr vim
+
+genfstab -U /mnt >> /mnt/etc/fstab
+## check and edit in case of errors
+
+### --- chroot into /mnt/boot --- ###
+arch-chroot /mnt
+
