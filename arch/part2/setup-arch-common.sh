@@ -18,7 +18,6 @@ mkdir -p /home/alex/Downloads /home/alex/Pictures /home/alex/Documents /home/ale
 
 # install sudo package
 $INSTALL sudo
-echo "\nalex ALL=(ALL:ALL) ALL" >> /etc/sudoers
 
 # steps to setup git
 $INSTALL git
@@ -41,7 +40,7 @@ $INSTALL i2ctools gpiod dmidecode hwloc
 $INSTALL screenfetch tree ranger graphviz zip
 
 # vim setup
-$INSTALL vim ctags
+$INSTALL vi vim ctags
 ln -sf /home/alex/configuration/.vimrc /home/alex/.vimrc
 ln -sf /home/alex/configuration/.ctags /home/alex/.ctags
 
@@ -55,3 +54,6 @@ ln -sf /home/alex/configuration/.ackrc /home/alex/.ackrc
 
 # change ownership of /home/alex
 chown -R alex:alex /home/alex
+
+echo "TODO: generate ssh-keys"
+echo "TODO: visudo /etc/sudoers"

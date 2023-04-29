@@ -29,10 +29,10 @@ umount /mnt
 cryptsetup close root
 cryptsetup open /dev/sda2 root
 mount /dev/mapper/root /mnt
+mkdir -p /mnt/boot
 umount /mnt
 
 ## mount at /mnt, /mnt/boot
-mkdir -p /mnt/boot
 mount /dev/sda2 /mnt
 mount /dev/sda1 /mnt/boot
 

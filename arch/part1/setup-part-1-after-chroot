@@ -28,6 +28,7 @@ mkinitcpio -P
 # find UUID by "ls -l /dev/disk/by-uuid"$
 # edit /etc/default/grub and  append kernel parameters to$
 # GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=UUID=device-UUID:root root=/dev/mapper/root"$
+mkdir -p /boot/grub
 grub-mkconfig -o /boot/grub/grub.cfg$
 
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
