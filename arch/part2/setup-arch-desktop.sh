@@ -2,11 +2,13 @@
 # system. does not make much sense for server system.
 
 # do the common part first
-source /home/alex/configuration/arch/setup-arch-common.sh
+source /home/alex/configuration/arch/part2/setup-arch-common.sh
 
 # TODO steps to setup x server and qtile
-$INSTALL xorg xorg-xinit
+$INSTALL xorg xorg-xinit qtile
 cp /home/alex/configuration/.xinitrc /home/alex/
+mkdir -p /home/alex/.config/qtile
+cp /home/alex/configuration/qtile/config.py /home/alex/.config/qtile
 
 # email
 $INSTALL thunderbird

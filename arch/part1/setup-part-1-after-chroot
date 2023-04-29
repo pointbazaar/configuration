@@ -1,10 +1,6 @@
 ## my notes, based on official Arch install Guide
 ## https://wiki.archlinux.org/title/installation_guide
 
-## this is not a script since it involves manual steps
-## such as plugging things in/out and don't want to
-## overwrite the live usb by accident lol
-
 ## set timezone
 ln -sf /usr/share/zoneinfo/Europe/Berlin /etc/localtime
 hwclock --systohc
@@ -20,7 +16,21 @@ echo "zbox\n" > /etc/hostname
 ## set root password
 passwd
 
-## TODO: install grub bootloader
+## configure mkinitcpio, edit /etc/mkinitcpio.conf
+## important: udev, keyboard, keymap, encrypt
+## Order is important, e.g. 'encrypt' should be before 'filesystem'
+## HOOKS=(base udev autodetect modconf kms keyboard keymap consolefont block encrypt filesystems fsck)
+## recreate initramfs
+mkinitcpio -P
+
+
+## configure grub bootloader
+# find UUID by "ls -l /dev/disk/by-uuid"$
+# edit /etc/default/grub and  append kernel parameters to$
+# GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=UUID=device-UUID:root root=/dev/mapper/root"$
+grub-mkconfig -o /boot/grub/grub.cfg$
+
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 
 ## exit chroot environment
 exit
@@ -28,5 +38,5 @@ exit
 ## umount partitions
 umount -R /mnt
 
-echo "now reboot, remove stick"
-echo "continue with setup-arch-part2.sh"
+# now reboot, remove stick, continue with setup-arch-part2.sh
+reboot
