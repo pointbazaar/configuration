@@ -4,11 +4,12 @@
 # do the common part first
 source /home/alex/configuration/arch/part2/setup-arch-common.sh
 
-# TODO steps to setup x server and qtile
+# TODO steps to setup x server, qtile, slock
 $INSTALL xorg xorg-xinit qtile
 cp /home/alex/configuration/.xinitrc /home/alex/
 mkdir -p /home/alex/.config/qtile
 cp /home/alex/configuration/qtile/config.py /home/alex/.config/qtile
+$INSTALL slock
 
 # email
 $INSTALL thunderbird
@@ -17,7 +18,7 @@ $INSTALL thunderbird
 $INSTALL feh vlc inkscape gimp
 
 # pdf viewer
-$INSTALL zathura
+$INSTALL zathura zathura-pdf-poppler
 mkdir /etc/config
 cp /home/alex/configuration/zathurarc /etc/config
 
