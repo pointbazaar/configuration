@@ -34,7 +34,7 @@ ln -sf /home/alex/configuration/.ssh/config /home/alex/.ssh/config
 $INSTALL gcc gdb make cmake nasm flex
 
 # work tools
-$INSTALL i2ctools gpiod dmidecode hwloc
+$INSTALL i2ctools gpiod dmidecode hwloc usbutils
 
 # misc packages
 $INSTALL screenfetch tree ranger graphviz zip
