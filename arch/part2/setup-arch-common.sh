@@ -35,6 +35,7 @@ $INSTALL gcc gdb make cmake nasm flex
 
 # work tools
 $INSTALL i2ctools gpiod dmidecode hwloc
+$INSTALL usbutils
 
 # misc packages
 $INSTALL screenfetch tree ranger graphviz zip

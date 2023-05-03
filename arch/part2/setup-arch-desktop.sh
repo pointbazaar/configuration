@@ -37,3 +37,7 @@ systemctl --user restart pulseaudio.service
 
 # CAD
 $INSTALL freecad
+
+# Printing, CUPS, Printers
+$INSTALL cups cups-pdf
+systemctl enable cups.service
