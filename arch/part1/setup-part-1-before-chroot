@@ -33,7 +33,7 @@ mkdir -p /mnt/boot
 umount /mnt
 
 ## mount at /mnt, /mnt/boot
-mount /dev/sda2 /mnt
+mount /dev/mapper/root /mnt
 mount /dev/sda1 /mnt/boot
 
 ## need both microcode packages, script should work for intel and amd systems

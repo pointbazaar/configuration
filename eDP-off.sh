@@ -1,1 +1,1 @@
-xrandr --output eDP --off
+xrandr --output eDP-1 --off

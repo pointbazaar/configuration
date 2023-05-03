@@ -19,6 +19,9 @@ mkdir -p /home/alex/Downloads /home/alex/Pictures /home/alex/Documents /home/ale
 # install sudo package
 $INSTALL sudo
 
+# auto-start NetworkManager
+systemctl enable NetworkManager
+
 # steps to setup git
 $INSTALL git
 git config --global user.email "alexander.hansen@9elements.com"
