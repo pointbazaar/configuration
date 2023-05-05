@@ -19,8 +19,8 @@ $INSTALL feh vlc inkscape gimp
 
 # pdf viewer
 $INSTALL zathura zathura-pdf-poppler
-mkdir /etc/config
-cp /home/alex/configuration/zathurarc /etc/config
+mkdir -p /home/alex/.config/zathura
+cp /home/alex/configuration/zathurarc /home/alex/.config/zathura/
 
 # terminal emulator
 $INSTALL kitty
