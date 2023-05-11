@@ -44,9 +44,12 @@ $INSTALL usbutils
 $INSTALL screenfetch tree ranger graphviz zip
 
 # vim setup
-$INSTALL vi vim ctags
+$INSTALL vi vim
 ln -sf /home/alex/configuration/.vimrc /home/alex/.vimrc
-ln -sf /home/alex/configuration/.ctags /home/alex/.ctags
+# ctags
+$INSTALL ctags
+mkdir -p /home/alex/.config/ctags/
+ln -sf /home/alex/configuration/.ctags /home/alex/.config/.ctags
 
 $INSTALL htop
 mkdir -p /home/alex/.config/htop
@@ -55,6 +58,7 @@ cp /home/alex/configuration/htoprc /home/alex/.config/htop/htoprc
 # ack which is similar to grep
 $INSTALL ack
 ln -sf /home/alex/configuration/.ackrc /home/alex/.ackrc
+$INSTALL ripgrep
 
 # change ownership of /home/alex
 chown -R alex:alex /home/alex
