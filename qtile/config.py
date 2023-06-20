@@ -59,7 +59,7 @@ groups = [
             label = grpstr(2, "web"), 
             spawn = "firefox",
             exclusive = False,
-            matches=[Match(wm_class=["firefox","Firefox","Firefox-esr","xpdf","Xpdf","Atril","qutebrowser","Zathura"])]
+            matches=[Match(wm_class=["Firefox","Firefox-esr","firefox","xpdf","Xpdf","Atril","qutebrowser","Zathura", "feh","Gitk","gitk"])]
         ),
         Group(name = "3", label = grpstr(3, "edit"), matches=[Match(wm_class=["geany","freecad","FreeCAD"])]),
         Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),

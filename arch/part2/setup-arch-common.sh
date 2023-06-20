@@ -40,6 +40,9 @@ $INSTALL gcc gdb make cmake nasm flex
 $INSTALL i2ctools gpiod dmidecode hwloc
 $INSTALL usbutils
 
+# networking tools (nslookup)
+$INSTALL bind
+
 # misc packages
 $INSTALL screenfetch tree ranger graphviz zip
 
