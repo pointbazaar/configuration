@@ -27,6 +27,7 @@ $INSTALL kitty
 ln -sf /home/alex/configuration/kitty/kitty.conf /home/alex/.config/kitty/kitty.conf
 
 # web browser
+$INSTALL firefox
 $INSTALL qutebrowser
 mkdir -p /home/alex/.config/qutebrowser
 ln -sf /home/alex/configuration/qutebrowser/config.py /home/alex/.config/qutebrowser/config.py
