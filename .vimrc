@@ -10,13 +10,15 @@ set number
 " highlight the current line
 set cursorline
 
+" show the filename
+set laststatus=2
+
 " highlight trailing whitespace
 :highlight ExtraWhitespace ctermbg=red guibg=red
 :match ExtraWhitespace /\s\+$/
 
 set list
 set listchars=tab:\|\ 
-
 
 "enable autocompletion?
 set wildmode=longest,list,full
