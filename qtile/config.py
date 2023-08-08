@@ -61,7 +61,11 @@ groups = [
             exclusive = False,
             matches=[Match(wm_class=["Firefox","Firefox-esr","firefox","xpdf","Xpdf","Atril","qutebrowser","Zathura", "feh","Gitk","gitk"])]
         ),
-        Group(name = "3", label = grpstr(3, "edit"), matches=[Match(wm_class=["geany","freecad","FreeCAD"])]),
+        Group(name = "3",
+            label = grpstr(3, "edit"),
+            spawn = "thunderbird",
+            matches=[Match(wm_class=["geany","freecad","FreeCAD"])]
+        ),
         Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),
 ]
 
@@ -85,6 +89,7 @@ for i in groups:
 
 layouts = [
     layout.Columns(
+        num_columns = 3, #TODO: calculate number of columns based on screen width
 		border_normal = color_border,
 		border_focus  = color_border_focus,
 		border_width  = 5,
