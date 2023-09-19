@@ -64,13 +64,14 @@ groups = [
         Group(name = "3",
             label = grpstr(3, "edit"),
             spawn = "thunderbird",
-            matches=[Match(wm_class=["geany","freecad","FreeCAD"])]
+            exclusive = False,
+            matches=[Match(wm_class=["geany","freecad","FreeCAD","thunderbird","Thunderbird"])]
         ),
         Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),
 ]
 
 color_fg           = "#d75f5f"
-color_border       = "#200000"
+color_border       = "#b09796"
 color_border_focus = "#f00000"
 color_transparent  = "#000000"
 
