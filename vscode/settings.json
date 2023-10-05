@@ -1,0 +1,32 @@
+{
+    "workbench.colorTheme": "Default Dark Modern",
+    "workbench.colorCustomizations": {
+        "editorWhitespace.foreground": "#894545"
+    },
+
+    "git.enabled": false,
+    "window.zoomLevel": 1,
+
+    "editor.acceptSuggestionOnCommitCharacter": true,
+
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoIndent": "full",
+
+    "editor.bracketPairColorization.enabled": true,
+    "editor.colorDecorators": true,
+    
+    "editor.cursorBlinking": "blink",
+    "editor.cursorStyle": "line",
+    "editor.cursorWidth": 4,
+    "editor.cursorSurroundingLines": 3,
+    "editor.detectIndentation": true,
+    "editor.fontFamily": "'Droid Sans Mono', 'monospace', monospace",
+    "editor.fontSize": 14,
+    "editor.guides.indentation": true,
+    "editor.lineNumbers": "on",
+    "editor.minimap.enabled": true,
+
+    
+    "editor.renderWhitespace": "boundary"
+}
