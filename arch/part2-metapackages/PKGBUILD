@@ -1,0 +1,55 @@
+pkgname=alexander_common
+pkgver=1.0.1
+pkgrel=1
+pkgdesc='archlinux meta package - common packages'
+arch=('x86_64')
+license=('MIT')
+depends=(
+'sudo'
+'git'
+'sshpass'
+'gcc'
+'gdb'
+'make'
+'cmake'
+'meson'
+'nasm'
+'flex'
+'i2c-tools'
+'dmidecode'
+'hwloc'
+'usbutils'
+'bind'
+'screenfetch'
+'tree'
+'ranger'
+'graphviz'
+'zip'
+'vim'
+'ctags'
+'ripgrep'
+#'tio' # pacman cannot resolve
+
+#desktop packages
+'zathura'
+'zathura-pdf-poppler'
+'thunderbird'
+'pulseaudio'
+'pulsemixer'
+'bat'
+'firefox'
+'code'
+'feh'
+'inkscape'
+'freecad'
+
+#window manager,lock screen,...
+'qtile'
+'slock'
+'kitty'
+
+#dev
+'dtc' # devicetree compiler
+'strace' # trace system calls
+'bear'
+)
