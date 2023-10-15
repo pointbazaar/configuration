@@ -15,7 +15,8 @@ set cursorline
 :match ExtraWhitespace /\s\+$/
 
 set list
-set listchars=tab:→·
+set listchars=tab:\|\ 
+
 
 "enable autocompletion?
 set wildmode=longest,list,full
