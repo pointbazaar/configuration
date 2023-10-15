@@ -8,12 +8,6 @@ depends=(
 'sudo'
 'git'
 'sshpass'
-'gcc'
-'gdb'
-'make'
-'cmake'
-'meson'
-'nasm'
 'flex'
 'i2c-tools'
 'dmidecode'
@@ -26,7 +20,6 @@ depends=(
 'graphviz'
 'zip'
 'vim'
-'ctags'
 'ripgrep'
 #'tio' # pacman cannot resolve
 
@@ -42,6 +35,7 @@ depends=(
 'feh'
 'inkscape'
 'freecad'
+'guvcview' # usb cameras
 
 #window manager,lock screen,...
 'qtile'
@@ -49,7 +43,23 @@ depends=(
 'kitty'
 
 #dev
-'dtc' # devicetree compiler
+'dtc'    # devicetree compiler
 'strace' # trace system calls
 'bear'
+'ctags'
+'clang'
+'cmake'
+'gcc'
+'gdb'
+'nasm'
+'meson'
+'make'
+'dhcp'
+
+#dev,filesystems
+dosfstools
+
+#dev,AVR
+'arduino'          # arduino C libraries
+'arduino-avr-core' # arduino C libraries
 )
