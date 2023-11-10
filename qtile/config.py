@@ -63,11 +63,16 @@ groups = [
         ),
         Group(name = "3",
             label = grpstr(3, "edit"),
-            spawn = "thunderbird",
             exclusive = False,
-            matches=[Match(wm_class=["geany","freecad","FreeCAD","thunderbird","Thunderbird"])]
+            matches=[Match(wm_class=["geany","freecad","FreeCAD"])]
         ),
         Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),
+        Group(name = "5",
+            label = grpstr(5, "email"),
+            spawn = "thunderbird",
+            exclusive = False,
+            matches=[Match(wm_class=["thunderbird","Thunderbird"])]
+        ),
 ]
 
 color_fg           = "#d75f5f"
