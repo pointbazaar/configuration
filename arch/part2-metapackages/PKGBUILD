@@ -21,6 +21,7 @@ depends=(
 'zip'
 'vim'
 'ripgrep'
+'pdfgrep'
 #'tio' # pacman cannot resolve
 
 #desktop packages
