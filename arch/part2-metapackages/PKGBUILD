@@ -57,6 +57,10 @@ depends=(
 'make'
 'dhcp'
 
+#sandisk usb card reader
+'libmtp'
+'mtpfs'
+
 #dev,filesystems
 dosfstools
 
