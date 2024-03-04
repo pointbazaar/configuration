@@ -11,23 +11,27 @@ timedatectl
 
 ## format the disk where to install Arch
 fdisk /dev/sda
-## create 2 partitions
+## create 3 partitions
 # (1) /dev/sda1  4 GB EFI SYSTEM
-# (3) /dev/sda2  Rest for ext4 / Linux Filesystem
+# (2) /dev/sda2  200 GB ext4 (for backup/restore of /home in case my arch gets bricked)
+# (3) /dev/sda3  Rest for ext4 / Linux Filesystem
 
 # FAT filesystem for EFI System Partition
 mkfs.fat -F 32 /dev/sda1
 
+# ext4 filesystem for backup partition
+mkfs.ext4 /dev/sda2
+
 ## filesystem encryption ##
-cryptsetup -y -v luksFormat /dev/sda2
-cryptsetup open /dev/sda2 root
+cryptsetup -y -v luksFormat /dev/sda3
+cryptsetup open /dev/sda3 root
 mkfs.ext4 /dev/mapper/root
 mount /dev/mapper/root /mnt
 
 ## test cryptsetup ##
 umount /mnt
 cryptsetup close root
-cryptsetup open /dev/sda2 root
+cryptsetup open /dev/sda3 root
 mount /dev/mapper/root /mnt
 mkdir -p /mnt/boot
 umount /mnt

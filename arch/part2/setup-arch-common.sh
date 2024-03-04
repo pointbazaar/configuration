@@ -30,7 +30,7 @@ git config --global core.editor vim
 git config pull.rebase false
 
 # ssh utilities
-$INSTALL ssh sshpass
+$INSTALL openssh sshpass
 ln -sf /home/alex/configuration/.ssh/config /home/alex/.ssh/config
 
 # C Language Toolchain
@@ -70,4 +70,7 @@ $INSTALL ripgrep
 chown -R alex:alex /home/alex
 
 echo "TODO: generate ssh-keys"
+
 echo "TODO: visudo /etc/sudoers"
+# add following line:
+# alex ALL=(ALL:ALL) ALL"
