@@ -9,3 +9,9 @@ PATH=~/espl1000/compiler/build:~/espl1000/lexer/build:~/espl1000/parser/build:$P
 export RIPGREP_CONFIG_PATH=/home/alex/.ripgreprc
 
 PATH=$PATH:/home/alex/SF100Linux/
+
+TERM=xterm
+
+eval `ssh-agent` &> /dev/null
+ssh-add ~/.ssh/id_ed25519 &> /dev/null
+ssh-add ~/.ssh/id_ed25519_work &> /dev/null
