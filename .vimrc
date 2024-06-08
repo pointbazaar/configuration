@@ -42,3 +42,14 @@ nnoremap <C-c> <C-]>
 "disable the automatic wrapping of long lines
 :set textwidth=0
 :set wrapmargin=0
+
+
+" do a :PlugInstall
+" to install the plugins
+" https://github.com/junegunn/vim-plug
+call plug#begin()
+
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+
+call plug#end()
