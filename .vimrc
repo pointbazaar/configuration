@@ -43,7 +43,6 @@ nnoremap <C-c> <C-]>
 :set textwidth=0
 :set wrapmargin=0
 
-
 " do a :PlugInstall
 " to install the plugins
 " https://github.com/junegunn/vim-plug
@@ -53,3 +52,5 @@ Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 
 call plug#end()
+
+map <C-c> :LspDefinition<CR>
