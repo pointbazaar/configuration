@@ -2,6 +2,8 @@
 # meaning that it can run >= 1 times and
 # have the same effect.
 
+set -eux
+
 export INSTALL="pacman --quiet -S --noconfirm --noprogressbar --needed "
 
 # check euid
@@ -11,33 +13,37 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # setup user account
-useradd alex
+if [! ls /home/alex ];
+	then useradd alex
+fi
 
 # setup /home/alex
 mkdir -p /home/alex/Downloads /home/alex/Pictures /home/alex/Documents /home/alex/.config
 
-# install sudo package
-$INSTALL sudo
-
 # auto-start NetworkManager
 systemctl enable NetworkManager
+systemctl start NetworkManager
+
+$INSTALL sudo
 
 # steps to setup git
 $INSTALL git
 git config --global user.email "alexander.hansen@9elements.com"
 git config --global user.name "Alexander Hansen"
 git config --global core.editor vim
-git config pull.rebase false
+git config --global pull.rebase false
 
 # ssh utilities
 $INSTALL openssh sshpass
+mkdir -p /home/alex/.ssh/
 ln -sf /home/alex/configuration/.ssh/config /home/alex/.ssh/config
 
 # C Language Toolchain
 $INSTALL gcc gdb make cmake nasm flex
 
 # work tools
-$INSTALL i2ctools gpiod dmidecode hwloc
+#$INSTALL i2ctools gpiod # seem to be unavailable?
+$INSTALL dmidecode hwloc
 $INSTALL usbutils
 
 # networking tools (nslookup)

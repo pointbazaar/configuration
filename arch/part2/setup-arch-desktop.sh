@@ -1,8 +1,10 @@
 # this script is for the installation of a desktop
 # system. does not make much sense for server system.
 
+set -eux
+
 # do the common part first
-source /home/alex/configuration/arch/part2/setup-arch-common.sh
+source setup-arch-common.sh
 
 # TODO steps to setup x server, qtile, slock
 $INSTALL xorg xorg-xinit qtile
@@ -24,6 +26,7 @@ cp /home/alex/configuration/zathurarc /home/alex/.config/zathura/
 
 # terminal emulator
 $INSTALL kitty
+mkdir -p /home/alex/.config/kitty
 ln -sf /home/alex/configuration/kitty/kitty.conf /home/alex/.config/kitty/kitty.conf
 
 # web browser
