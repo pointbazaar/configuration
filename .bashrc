@@ -15,3 +15,5 @@ TERM=xterm
 eval `ssh-agent` &> /dev/null
 ssh-add ~/.ssh/id_ed25519 &> /dev/null
 ssh-add ~/.ssh/id_ed25519_work &> /dev/null
+
+alias clip="xsel -ib"

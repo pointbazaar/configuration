@@ -55,6 +55,9 @@ $INSTALL screenfetch tree ranger graphviz zip
 # .bashrc
 ln -s /home/alex/configuration/.bashrc /home/alex/.bashrc
 
+# xsel to use clipboard in terminal
+$INSTALL xsel
+
 # vim setup
 $INSTALL vi vim
 ln -sf /home/alex/configuration/.vimrc /home/alex/.vimrc
