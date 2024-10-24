@@ -1,0 +1,3 @@
+set shell bash
+
+map <enter> $vim $f
