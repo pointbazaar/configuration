@@ -75,7 +75,7 @@ groups = [
         ),
 ]
 
-color_fg           = "#d75f5f"
+color_fg           = "#080808"
 color_border       = "#b09796"
 color_border_focus = "#f00000"
 color_transparent  = "#000000"
@@ -149,7 +149,7 @@ def make_bar():
             widget.Clock(format="%A, %d.%m.%Y        %H:%M"),
         ],
         24,
-        background=color_border+"90"
+        background=color_border
     )
 
 screens = [make_screen(), make_screen()]
