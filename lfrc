@@ -1,0 +1,16 @@
+# interpreter for shell commands
+set shell /bin/bash
+
+# Shell commands with multiline definitions and/or positional arguments and/or
+# quotes do not work in Windows. For anything but the simplest shell commands,
+# it is recommended to create separate script files and simply call them here
+# in commands or mappings.
+
+# change the editor used in default editor keybinding
+# editor keybinding accordingly.
+map <enter> $vim $f
+
+
+# leave some space at the top and the bottom of the screen
+set scrolloff 10
+
