@@ -64,7 +64,7 @@ groups = [
         Group(name = "3",
             label = grpstr(3, "edit"),
             exclusive = False,
-            matches=[Match(wm_class=["geany","freecad","FreeCAD","code-oss"])]
+            matches=[Match(wm_class=["geany","freecad","FreeCAD","code-oss","OpenSCAD"])]
         ),
         Group(name = "4", label = grpstr(4, "games"), matches=[Match(wm_class=["steam","Steam"])]),
         Group(name = "5",
