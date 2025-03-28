@@ -38,6 +38,15 @@ nnoremap <C-c> <C-]>
 "to go back in the tags stack: <C-t>
 
 
+" split buffer open:  :sp
+" split buffer close: :q
+
+" split buffer: switch to upper buffer
+nnoremap <F1> <C-w>k
+" split buffer: switch to lower buffer
+nnoremap <F2> <C-w>j
+
+
 
 "disable the automatic wrapping of long lines
 :set textwidth=0
