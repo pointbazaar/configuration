@@ -14,6 +14,8 @@ export RIPGREP_CONFIG_PATH=/home/alex/.ripgreprc
 PATH=$PATH:/home/alex/SF100Linux/:/usr/local/bin
 PATH=$PATH:/home/alex/.local/bin/
 PATH=$PATH:/home/alex/.local/bin/gerrit-scripts/
+PATH=$PATH:/home/alex/worknotes/yocto-and-bitbake/yoctool/
+PATH=$PATH:/home/alex/9eSec/fti/
 
 TERM=xterm
 
