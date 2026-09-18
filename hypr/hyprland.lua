@@ -132,7 +132,7 @@ hl.config({
     },
 
     animations = {
-        enabled = true,
+        enabled = false,
     },
 })
 
@@ -288,8 +288,8 @@ hl.window_rule({
 hl.workspace_rule({workspace = "1", monitor = "DP-2", default=true});
 hl.workspace_rule({workspace = "2", monitor = "DP-2", default=true});
 hl.workspace_rule({workspace = "3", monitor = "DP-2", default=true});
-hl.workspace_rule({workspace = "4", monitor = "eDP-1", default=true});
-hl.workspace_rule({workspace = "5", monitor = "eDP-1", default=true});
+hl.workspace_rule({workspace = "4", monitor = "DP-2", default=true});
+hl.workspace_rule({workspace = "5", monitor = "DP-2", default=true});
 
 hl.window_rule({match = {class = "kitty"}, workspace = "1"});
 hl.window_rule({match = {class = "firefox"}, workspace = "2"});
