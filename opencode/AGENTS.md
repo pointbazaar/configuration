@@ -23,6 +23,8 @@ These apply to every session, a repositories own `AGENTS.md` may add or override
 - do not re-define constants which are available from C++ STL headers
 - do not re-define functions which are available from C++ STL headers
 - do not write non-template function definitions into .hpp files
+- avoid `using namespace`
+- avoid `using` directive
 - prefer constexpr over preprocessor directives because it preserves the parsing
   and typechecking of disabled code.
 
