@@ -27,6 +27,7 @@ These apply to every session, a repositories own `AGENTS.md` may add or override
 - avoid `using` directive
 - prefer constexpr over preprocessor directives because it preserves the parsing
   and typechecking of disabled code.
+- avoid writing code that uses exceptions. Pass errors by value instead.
 
 ## commit message
 - format your commit messages as 50/72
