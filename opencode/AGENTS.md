@@ -59,6 +59,13 @@ References:
 
 ## git usage
 - do not create separate git worktrees, create normal branches instead
+- do not add large binaries to the git repo
+- do not add jpg  files to the git repo
+- do not add pdf  files to the git repo
+- do not add ppm  files to the git repo
+- do not add png  files to the git repo
+- do not add step files to the git repo
+- do not add stl  files to the git repo
 
 ## copyright
 - if you add copyright comments to a new file, use `SPDX-FileCopyrightText`
