@@ -2,6 +2,9 @@
 
 These apply to every session, a repositories own `AGENTS.md` may add or override.
 
+## making changes
+- if a repository has a `CONTRIBUTING.md` file, all rules in that file must be followed
+
 ## coding style (all programming languages)
 - do not write functions longer than 60 lines
 - avoid writing inline lambdas, prefer writing separate functions
