@@ -15,6 +15,7 @@ export PATH="/home/alex/SF100Linux:$PATH"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/home/alex/.local/bin:$PATH"
 export PATH="/home/alex/.local/bin/gerrit-scripts:$PATH"
+export PATH="/home/alex/worknotes/yocto-and-bitbake/yoctool/:$PATH"
 
 TERM=xterm
 
