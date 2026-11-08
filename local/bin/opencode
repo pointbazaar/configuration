@@ -6,4 +6,10 @@ set -euo pipefail
 #
 # verify filesystem access in opencode 'Shell' mode (press '!')
 
+# prevent a sandboxed opencode client from connecting to the non-sandboxed
+# background server
+#
+/usr/bin/opencode service set disabled true
+/usr/bin/opencode service status
+
 exec "$HOME/.local/bin/opencode-sandbox" /usr/bin/opencode --standalone "$@"
