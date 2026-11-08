@@ -1,0 +1,54 @@
+#!/bin/bash
+
+set -euo pipefail
+
+OP_DATA="$HOME/.local/share/opencode"
+OP_CONFIG="$HOME/.config/opencode"
+OP_CACHE="$HOME/.cache/opencode"
+OP_STATE="$HOME/.local/state/opencode"
+
+mkdir -p "$OP_DATA" "$OP_CONFIG" "$OP_CACHE" "$OP_STATE"
+
+if (( $# == 0 )); then
+    set -- /usr/bin/bash --noprofile --norc
+fi
+
+PROJECT="$(pwd -P)"
+
+# Refuse particularly dangerous accidental selections.
+if [[ "$PROJECT" == / || "$PROJECT" == "$HOME" ]]; then
+    printf 'Refusing to expose %s\n' "$PROJECT" >&2
+    exit 1
+fi
+
+exec bwrap \
+    --unshare-all \
+    --unshare-user \
+    --share-net \
+    --die-with-parent \
+    --proc /proc \
+    --dev /dev \
+    --tmpfs /tmp \
+    --new-session \
+    --ro-bind /etc /etc \
+    --ro-bind /usr /usr \
+    --symlink usr/lib /lib \
+    --symlink usr/lib64 /lib64 \
+    --symlink usr/bin /bin \
+    --symlink usr/sbin /sbin \
+    --bind "$PROJECT" "$PROJECT" \
+    --chdir "$PROJECT" \
+    --dir "$HOME" \
+    --clearenv \
+    --setenv HOME "$HOME" \
+    --setenv TERM "${TERM:-xterm-256color}" \
+    --setenv LANG C.UTF-8 \
+    --setenv TMPDIR /tmp \
+    --setenv PS1 '[opencode sandbox] \u@\h:\w\$ ' \
+    --setenv SANDBOX 1 \
+    --ro-bind-try "$HOME/.gitconfig" "$HOME/.gitconfig" \
+    --bind "$OP_CONFIG" "$HOME/.config/opencode" \
+    --bind "$OP_DATA" "$HOME/.local/share/opencode" \
+    --bind "$OP_CACHE" "$HOME/.cache/opencode" \
+    --bind "$OP_STATE" "$HOME/.local/state/opencode" \
+    -- "$@"

@@ -53,7 +53,7 @@ $INSTALL bind
 $INSTALL screenfetch tree ranger graphviz zip
 
 # .bashrc
-ln -s /home/alex/configuration/.bashrc /home/alex/.bashrc
+ln -sf /home/alex/configuration/.bashrc /home/alex/.bashrc
 
 # xsel to use clipboard in terminal
 $INSTALL xsel
@@ -70,9 +70,6 @@ $INSTALL htop
 mkdir -p /home/alex/.config/htop
 cp /home/alex/configuration/htoprc /home/alex/.config/htop/htoprc
 
-# ack which is similar to grep
-$INSTALL ack
-ln -sf /home/alex/configuration/.ackrc /home/alex/.ackrc
 $INSTALL ripgrep
 
 # change ownership of /home/alex
@@ -83,3 +80,8 @@ echo "TODO: generate ssh-keys"
 echo "TODO: visudo /etc/sudoers"
 # add following line:
 # alex ALL=(ALL:ALL) ALL"
+
+# setup opencode sandbox
+mkdir -p /home/alex/.local/bin
+ln -sf /home/alex/configuration/local/bin/opencode-sandbox /home/alex/.local/bin/opencode-sandbox
+ln -sf /home/alex/configuration/local/bin/opencode /home/alex/.local/bin/opencode

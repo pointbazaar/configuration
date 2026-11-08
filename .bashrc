@@ -11,9 +11,10 @@ PATH=~/espl1000/build/parser:$PATH
 
 export RIPGREP_CONFIG_PATH=/home/alex/.ripgreprc
 
-PATH=$PATH:/home/alex/SF100Linux/:/usr/local/bin
-PATH=$PATH:/home/alex/.local/bin/
-PATH=$PATH:/home/alex/.local/bin/gerrit-scripts/
+export PATH="/home/alex/SF100Linux:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/home/alex/.local/bin:$PATH"
+export PATH="/home/alex/.local/bin/gerrit-scripts:$PATH"
 
 TERM=xterm
 

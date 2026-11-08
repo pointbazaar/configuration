@@ -1,0 +1,9 @@
+#!/bin/bash
+set -euo pipefail
+
+# --standalone option is needed, otherwise the sandboxed opencode client
+# can reach a non-sandboxed server and read the whole filesystem
+#
+# verify filesystem access in opencode 'Shell' mode (press '!')
+
+exec "$HOME/.local/bin/opencode-sandbox" /usr/bin/opencode --standalone "$@"
