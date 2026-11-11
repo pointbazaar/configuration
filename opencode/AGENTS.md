@@ -39,6 +39,9 @@ These apply to every session, a repositories own `AGENTS.md` may add or override
 - when referring to specifications, websites and other content not in the repo,
   you should use a `References:` section
 - when fixing bugs or gaps introduced by an earlier commit, write a `Fixes: ...` line
+- each `Fixes: ...` tag must be as per the following git alias:
+  [alias]
+      fixes ="log -n1 --format='%h (\"%s\")' --abbrev=12"
 - commands and their output should be within triple backticks like
   ```
   $ echo hi
