@@ -28,7 +28,7 @@ $INSTALL sudo
 
 # steps to setup git
 $INSTALL git
-git config --global user.email "alexander.hansen@9elements.com"
+git config --global user.email "alex23667@gmail.com"
 git config --global user.name "Alexander Hansen"
 git config --global core.editor vim
 git config --global pull.rebase false
