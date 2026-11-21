@@ -49,6 +49,10 @@ exec bwrap \
     --ro-bind-try "$HOME/.gitconfig" "$HOME/.gitconfig" \
     --bind "$OP_CONFIG" "$HOME/.config/opencode" \
     --bind "$OP_DATA" "$HOME/.local/share/opencode" \
-    --bind "$OP_CACHE" "$HOME/.cache/opencode" \
     --bind "$OP_STATE" "$HOME/.local/state/opencode" \
+    --bind "$OP_CACHE" "$HOME/.cache/opencode" \
+    --bind "$HOME/.local/include" "$HOME/.local/include" \
+    --bind "$HOME/.local/bin" "$HOME/.local/bin" \
+    --bind "$HOME/.local/lib" "$HOME/.local/lib" \
+    --bind "$HOME/.local/libsubtractive-osmesa" "$HOME/.local/libsubtractive-osmesa" \
     -- "$@"
