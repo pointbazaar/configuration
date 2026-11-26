@@ -47,6 +47,8 @@ These apply to every session, a repositories own `AGENTS.md` may add or override
   $ echo hi
   hi
   ```
+- the commit message must always include some reasoning as to
+  why a change is done and why it is useful.
 
 ## Tested section
 - this section comes before the `References:` section
